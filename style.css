@@ -1,0 +1,176 @@
+:root {
+  --bg-color: #020408;
+  --panel-bg: #050b14;
+  --accent-red: #ff1e42;
+  --terminal-green: #00ff66;
+  --matrix-dim: rgba(0, 255, 102, 0.2);
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border-color: #0d1b2a;
+  --cyber-glow: 0 0 15px rgba(255, 30, 66, 0.3);
+  --matrix-glow: 0 0 12px rgba(0, 255, 102, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--bg-color);
+  background-image: 
+    linear-gradient(rgba(2, 4, 8, 0.95), rgba(2, 4, 8, 0.95)),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 102, 0.02) 2px, rgba(0, 255, 102, 0.02) 4px);
+  color: var(--text-main);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: var(--panel-bg);
+  border-bottom: 2px solid var(--accent-red);
+  box-shadow: var(--cyber-glow);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--accent-red);
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px rgba(255, 30, 66, 0.6);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+nav a:hover, nav a.active {
+  color: var(--terminal-green);
+  text-shadow: 0 0 8px rgba(0, 255, 102, 0.5);
+}
+
+main {
+  flex: 1;
+  max-width: 900px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Cyberpunk Matrix Terminal Cards */
+.card {
+  background: var(--panel-bg);
+  border: 1px solid var(--terminal-green);
+  border-left: 5px solid var(--terminal-green);
+  border-radius: 0px;
+  padding: 2rem;
+  margin-bottom: 1.8rem;
+  box-shadow: var(--matrix-glow), inset 0 0 20px rgba(0, 255, 102, 0.03);
+  position: relative;
+}
+
+/* Adds a tech classification header tag to every card */
+.card::before {
+  content: "// SECURE_DATA_NODE //";
+  display: block;
+  font-size: 0.7rem;
+  color: var(--terminal-green);
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+h1, h2 {
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h1 {
+  border-bottom: 1px dashed var(--accent-red);
+  padding-bottom: 0.5rem;
+}
+
+p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.inline-link {
+  color: var(--terminal-green);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.page-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-color);
+}
+
+.nav-btn {
+  background: var(--border-color);
+  color: var(--text-main);
+  padding: 0.6rem 1.2rem;
+  border-radius: 0px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  border: 1px solid var(--terminal-green);
+}
+
+.nav-btn:hover {
+  background: var(--terminal-green);
+  color: #020408;
+  box-shadow: var(--matrix-glow);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--panel-bg);
+  border-top: 2px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    gap: 0.8rem;
+  }
+  .card {
+    padding: 1.2rem;
+  }
+}
