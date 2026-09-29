@@ -20,12 +20,24 @@
   </header>
 
   <main>
-    <section class="card">
-      <h1>Exposing Institutional Corruption Worldwide</h1>
-      <p>Welcome to Bombshell Wire. This repository cuts through corporate-state narratives to bring direct oversight, leaked documentation, and verifiable public records straight to the public.</p>
-      <p>Every report published here embeds primary source links and official documents directly within the text, ensuring you can independently verify every claim.</p>
+    <section class="card" style="border-color: var(--accent-red);">
+      <p style="color: var(--accent-red); font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 0.5rem;">// SYSTEM STATUS: BYPASSING CORPORATE-STATE NARRATIVES //</p>
+      <h1 style="font-size: 2rem; line-height: 1.1; margin-bottom: 1rem; color: var(--terminal-green);">Exposing Institutional Corruption Worldwide</h1>
       
-      <div class="page-navigation">
+      <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.2rem;">
+        Welcome to <strong>Bombshell Wire</strong>. This repository cuts through corporate-state narratives to bring direct oversight, leaked documentation, and verifiable public records straight to the public.
+      </p>
+      
+      <p style="font-size: 0.95rem; color: var(--text-main); line-height: 1.5; margin-bottom: 1.5rem;">
+        Every report published here embeds primary source links and official documents directly within the text, ensuring you can independently verify every claim. No filters. No spin. Just the facts.
+      </p>
+
+      <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1.5rem; margin-bottom: 1rem;">
+        <a href="articles.html" class="nav-btn" style="background: var(--terminal-green); color: #000; font-weight: bold;">⚡ Launch Investigations</a>
+        <a href="media.html" class="nav-btn">🎥 View Video Drops</a>
+      </div>
+      
+      <div class="page-navigation" style="margin-top: 2rem; border-top: 1px dashed var(--border-color); padding-top: 1rem;">
         <span></span>
         <a href="articles.html" class="nav-btn">Next: Investigations →</a>
       </div>
@@ -38,4 +50,8 @@
 
 </body>
 </html>
+EOF
 
+git add index.html
+git commit -m "Upgrade homepage with high-impact cyber aesthetic and dual nav buttons"
+git push origin master
