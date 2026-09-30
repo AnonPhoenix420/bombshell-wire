@@ -23,6 +23,15 @@
       font-weight: bold;
       margin-bottom: 0.8rem;
     }
+    .source-link {
+      color: var(--terminal-green);
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+    .source-link:hover {
+      text-decoration: underline;
+      opacity: 0.8;
+    }
   </style>
 </head>
 <body>
@@ -98,13 +107,19 @@
         <li>🔹 <strong>Immunity Agreements:</strong> Evaluating the structural mechanics of the 2008 federal deal.</li>
       </ul>
 
-      <!-- Sources -->
+      <!-- Linked Sources -->
       <div style="margin-top: 2.5rem; border-top: 1px dashed var(--border-color); padding-top: 1.5rem;">
         <h3 style="color: var(--terminal-green); font-size: 1rem; margin-bottom: 0.8rem;">// VERIFIED REPOSITORY SOURCES & PUBLIC RECORDS //</h3>
         <ul style="list-style-type: none; padding-left: 0; color: var(--text-muted); font-size: 0.85rem; line-height: 1.6;">
-          <li style="margin-bottom: 0.6rem;">[1] <span style="color: var(--text-main);">U.S. Department of Justice</span>: Official Epstein Library & Declassified Disclosures.</li>
-          <li style="margin-bottom: 0.6rem;">[2] <span style="color: var(--text-main);">U.S. House Committee on Oversight and Government Reform Records</span>.</li>
-          <li style="margin-bottom: 0.6rem;">[3] <span style="color: var(--text-main);">CourtListener / Federal Court Docket Archives</span>: Civil Depositions & Exhibits.</li>
+          <li style="margin-bottom: 0.6rem;">
+            [1] <a href="https://www.justice.gov" target="_blank" class="source-link"><strong>U.S. Department of Justice</strong>: Official Library & Declassified Disclosures ↗</a>
+          </li>
+          <li style="margin-bottom: 0.6rem;">
+            [2] <a href="https://oversight.house.gov" target="_blank" class="source-link"><strong>U.S. House Committee on Oversight and Government Reform</strong>: Records & Subpoenas ↗</a>
+          </li>
+          <li style="margin-bottom: 0.6rem;">
+            [3] <a href="https://www.courtlistener.com" target="_blank" class="source-link"><strong>CourtListener / Federal Court Docket Archives</strong>: Civil Depositions & Exhibits ↗</a>
+          </li>
         </ul>
       </div>
 
