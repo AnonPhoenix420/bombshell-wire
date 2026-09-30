@@ -32,6 +32,34 @@
       text-decoration: underline;
       opacity: 0.8;
     }
+    .dossier-pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1.5rem 0;
+      border-top: 1px dashed var(--border-color);
+      border-bottom: 1px dashed var(--border-color);
+      padding: 1rem 0;
+    }
+    .page-tab {
+      padding: 8px 16px;
+      border: 1px solid var(--border-color);
+      background: rgba(0, 0, 0, 0.5);
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: all 0.2s ease;
+    }
+    .page-tab.active {
+      border-color: var(--terminal-green);
+      color: var(--terminal-green);
+      background: rgba(0, 255, 65, 0.05);
+      font-weight: bold;
+    }
+    .page-tab:hover:not(.active) {
+      border-color: var(--text-main);
+      color: var(--text-main);
+    }
   </style>
 </head>
 <body>
@@ -49,6 +77,13 @@
   <main>
     <div style="margin-bottom: 1.5rem;">
       <a href="articles.html" class="nav-btn">← Back to Investigations</a>
+    </div>
+
+    <!-- DOSSIER PAGINATION TABS (TOP) -->
+    <div class="dossier-pagination">
+      <a href="articles-epstein.html" class="page-tab active">[Page 1] Flight Logs</a>
+      <a href="articles-epstein2.html" class="page-tab">[Page 2] The Black Book</a>
+      <a href="articles-epstein3.html" class="page-tab">[Page 3] Financial Pipelines →</a>
     </div>
 
     <section class="card" style="border-color: var(--accent-red);">
@@ -123,8 +158,15 @@
         </ul>
       </div>
 
+      <!-- DOSSIER PAGINATION TABS (BOTTOM) -->
+      <div class="dossier-pagination" style="margin-top: 2rem;">
+        <a href="articles-epstein.html" class="page-tab active">[Page 1] Flight Logs</a>
+        <a href="articles-epstein2.html" class="page-tab">[Page 2] The Black Book</a>
+        <a href="articles-epstein3.html" class="page-tab">[Page 3] Financial Pipelines →</a>
+      </div>
+
       <!-- Navigation -->
-      <div class="page-navigation" style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 2.5rem; border-top: 1px dashed var(--border-color); padding-top: 1.5rem;">
+      <div class="page-navigation" style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.5rem; border-top: 1px dashed var(--border-color); padding-top: 1.5rem;">
         <a href="articles.html" class="nav-btn">← Back to Investigations</a>
         <a href="index.html" class="nav-btn">Home Page ↺</a>
       </div>
