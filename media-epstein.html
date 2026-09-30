@@ -46,6 +46,10 @@
       background: rgba(0, 255, 65, 0.05);
       font-weight: bold;
     }
+    .cat-tab:hover {
+      border-color: var(--text-main);
+      color: var(--text-main);
+    }
   </style>
 </head>
 <body>
@@ -62,13 +66,13 @@
   
   <main>
     <div style="margin-bottom: 1.5rem;">
-      <a href="media.html" class="nav-btn">← Back to Video Intercepts Hub</a>
+      <a href="media.html" class="nav-btn">← Back to Video Drops Hub</a>
     </div>
 
-    <!-- Category Filter Tabs -->
+    <!-- Category Filter Tabs (Top) -->
     <div class="category-tabs">
-      <a href="media.html" class="cat-tab">⚡ All Intercept Categories</a>
-      <a href="media-datacenter.html" class="cat-tab">🏭 All Data Center Video Feeds</a>
+      <a href="media.html" class="cat-tab">⚡ All Categories</a>
+      <a href="media-datacenter.html" class="cat-tab">🏭 Data Center Video Archives (All 5 Feeds)</a>
       <a href="media-epstein.html" class="cat-tab active">🔓 Epstein Network Video Logs</a>
     </div>
 
@@ -91,12 +95,20 @@
         <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
           <a href="articles-epstein.html" class="nav-btn" style="background: var(--terminal-green); color: #000; font-weight: bold; text-decoration: none; padding: 10px 20px;">📄 Open Epstein Dossier (Page 1)</a>
           <a href="articles-epstein2.html" class="nav-btn" style="background: var(--terminal-green); color: #000; font-weight: bold; text-decoration: none; padding: 10px 20px;">📄 Open Black Book (Page 2)</a>
+          <a href="articles-epstein3.html" class="nav-btn" style="background: var(--terminal-green); color: #000; font-weight: bold; text-decoration: none; padding: 10px 20px;">📄 Open Financial Pipelines (Page 3)</a>
         </div>
       </div>
 
-      <div class="page-navigation" style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 2.5rem; border-top: 1px dashed var(--border-color); padding-top: 1.5rem;">
-        <a href="media-datacenter.html" class="nav-btn">← Data Center Feeds</a>
-        <a href="media.html" class="nav-btn">Video Hub ↺</a>
+      <!-- Category Filter Tabs (Bottom) -->
+      <div class="category-tabs" style="margin-top: 2rem;">
+        <a href="media.html" class="cat-tab">⚡ All Categories</a>
+        <a href="media-datacenter.html" class="cat-tab">🏭 Data Center Video Archives (All 5 Feeds)</a>
+        <a href="media-epstein.html" class="cat-tab active">🔓 Epstein Network Video Logs</a>
+      </div>
+
+      <div class="page-navigation">
+        <a href="media-datacenter.html" class="nav-btn">← Data Center Video Archives</a>
+        <a href="media.html" class="nav-btn">Video Drop Hub ↺</a>
       </div>
     </section>
   </main>
