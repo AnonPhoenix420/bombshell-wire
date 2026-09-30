@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Center Thermal Feeds | Bombshell Wire</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .classified-stamp {
+      display: inline-block;
+      border: 1px solid var(--accent-red);
+      color: var(--accent-red);
+      padding: 2px 8px;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      font-weight: bold;
+      margin-bottom: 0.8rem;
+    }
+    .video-container {
+      position: relative;
+      width: 100%;
+      background: #000;
+      border: 2px solid var(--terminal-green);
+      box-shadow: var(--cyber-glow);
+      padding: 1rem;
+      margin: 1.5rem 0;
+    }
+    video {
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--border-color);
+      display: block;
+    }
+    .category-tabs {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px dashed var(--border-color);
+      padding-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .cat-tab {
+      padding: 8px 16px;
+      border: 1px solid var(--border-color);
+      background: rgba(0, 0, 0, 0.5);
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: all 0.2s ease;
+    }
+    .cat-tab.active {
+      border-color: var(--terminal-green);
+      color: var(--terminal-green);
+      background: rgba(0, 255, 65, 0.05);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">🚨 BOMBSHELL WIRE</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="articles.html">Investigations</a></li>
+        <li><a href="media.html" class="active" style="color: var(--terminal-green);">Video Drops</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <div style="margin-bottom: 1.5rem;">
+      <a href="media.html" class="nav-btn">← Back to Video Intercepts Hub</a>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="category-tabs">
+      <a href="media.html" class="cat-tab">⚡ All Intercepts</a>
+      <a href="media-datacenter.html" class="cat-tab active">🏭 Data Center Thermal Feeds</a>
+      <a href="media-epstein.html" class="cat-tab">🔓 Epstein Flight & Network Drops</a>
+    </div>
+
+    <section class="card" style="border-color: var(--terminal-green);">
+      <div class="classified-stamp">// VIDEO INTERCEPT: INFRASTRUCTURE & THERMAL POLLUTION //</div>
+      
+      <h1 style="font-size: 2rem; line-height: 1.2; margin-bottom: 1rem; color: var(--terminal-green);">
+        Data Center Thermal Pollution & Environmental Impact Feed
+      </h1>
+      
+      <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.6;">
+        Direct intercept analysis capturing the immense thermal dissipation, water cooling draw, and electrical grid strain associated with hyperscale data center builds in Portage County.
+      </p>
+
+      <!-- Video Player for heat pollution datacenters.mp4 -->
+      <div class="video-container">
+        <p style="color: var(--terminal-green); font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 8px;">// LIVE INTERCEPT STREAM: heat pollution datacenters.mp4 //</p>
+        <video controls>
+          <source src="heat pollution datacenters.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <h3 style="color: var(--terminal-green); margin-top: 2rem; margin-bottom: 0.5rem;">Technical Breakdown</h3>
+      <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
+        Hyperscale operations require continuous closed-loop cooling systems that discharge significant thermal loads into local waterways and atmospheric microclimates. This footage documents the baseline environmental metrics before and during operational capacity scaling.
+      </p>
+
+      <div class="page-navigation" style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 2.5rem; border-top: 1px dashed var(--border-color); padding-top: 1.5rem;">
+        <a href="media.html" class="nav-btn">← Video Intercepts Hub</a>
+        <a href="media-epstein.html" class="nav-btn">Epstein Video Logs →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Bombshell Wire. Open Source & Uncensored.</p>
+  </footer>
+</body>
+</html>
