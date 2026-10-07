@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bombshell Wire - Epstein Investigation Vault</title>
+    <title>Bombshell Wire - Epstein Dossier (Part 2)</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body { background: #0a0c10; color: #c9d1d9; font-family: monospace; margin: 0; padding: 15px; }
@@ -15,18 +15,20 @@
         .portal-btn { background: #161b22; border: 1px solid #30363d; color: #c9d1d9; padding: 10px 14px; text-decoration: none; border-radius: 4px; font-family: monospace; font-size: 0.85rem; }
         .portal-btn.active { border-color: #39d353; color: #39d353; background: #0d1117; }
         .secure-node { border: 1px solid #ff3333; background: #0d1117; padding: 20px; border-radius: 6px; margin-top: 20px; }
-        .secure-node h2 { color: #39d353; font-size: 1.3rem; margin-top: 5px; }
+        .secure-node h2 { color: #39d353; font-size: 1.4rem; margin-top: 5px; }
         .node-tag { color: #ff3333; font-size: 0.8rem; margin-bottom: 5px; display: block; }
-        .intel-card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 6px; margin-top: 15px; }
-        .intel-card h3 { color: #ff3333; margin-top: 0; font-size: 1.1rem; border-bottom: 1px solid #21262d; padding-bottom: 8px; }
-        .intel-card p { color: #c9d1d9; font-size: 0.88rem; line-height: 1.5; }
-        .video-container { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; background: #000; margin: 15px 0; border: 1px solid #30363d; border-radius: 4px; overflow: hidden; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .sources-box { background: #0d1117; border-left: 3px solid #39d353; padding: 12px; margin-top: 15px; font-size: 0.82rem; }
-        .sources-box ul { margin: 5px 0 0 20px; padding: 0; color: #8b949e; }
-        .sources-box li { margin-bottom: 4px; }
-        .sources-box a { color: #58a6ff; text-decoration: none; }
-        .sources-box a:hover { text-decoration: underline; }
+        .feed-grid { display: grid; grid-template-columns: 1fr; gap: 25px; margin-top: 20px; }
+        .feed-card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 6px; }
+        .feed-card h3 { color: #ff3333; font-size: 1rem; margin-top: 0; }
+        iframe { width: 100%; height: 220px; border: none; background: #000; border-radius: 4px; margin-top: 10px; }
+        .dialogue-box { background: #0d1117; border-left: 3px solid #39d353; padding: 12px; margin-top: 15px; font-size: 0.85rem; color: #8b949e; line-height: 1.4; }
+        .dialogue-box strong { color: #39d353; }
+        .docs-section { margin-top: 12px; font-size: 0.8rem; border-top: 1px dashed #30363d; padding-top: 10px; }
+        .docs-section span { color: #e3b341; display: block; margin-bottom: 5px; }
+        .doc-link { color: #58a6ff; text-decoration: none; display: inline-block; margin-right: 15px; margin-bottom: 5px; }
+        .doc-link:hover { text-decoration: underline; }
+        .external-link { display: inline-block; margin-top: 10px; color: #58a6ff; text-decoration: none; font-size: 0.8rem; border: 1px solid #1f6feb; padding: 4px 8px; border-radius: 3px; background: #0d1117; }
+        .external-link:hover { background: #1f6feb; color: #fff; }
     </style>
 </head>
 <body>
@@ -40,30 +42,88 @@
     </header>
 
     <div class="portal-grid">
-        <a href="media-epstein.html" class="portal-btn ">🔒 Epstein Pt. 1</a>
+        <a href="media-epstein.html" class="portal-btn">🔒 Epstein Pt. 1</a>
         <a href="media-epstein-2.html" class="portal-btn active">🔒 Epstein Pt. 2</a>
-        <a href="media-epstein-3.html" class="portal-btn ">🔒 Epstein Pt. 3</a>
-        <a href="media-epstein-4.html" class="portal-btn ">🔒 Epstein Pt. 4</a>
+        <a href="media-epstein-3.html" class="portal-btn">🔒 Epstein Pt. 3</a>
+        <a href="media-epstein-4.html" class="portal-btn">🔒 Epstein Pt. 4</a>
         <a href="media-epstein-datasets.html" class="portal-btn">📁 DOJ Pool</a>
     </div>
 
     <div class="secure-node">
-        <span class="node-tag">// SECURE_NODE: DOSSIER-02 //</span>
-        <h2>COMPOUND SURVEILLANCE & PALM BEACH POLICE ARCHIVES</h2>
-        <p style="color: #8b949e; font-size: 0.9rem;">Deep-dive intelligence review covering municipal police records, property access logs, and federal search warrant returns for the Palm Beach and Manhattan estates.</p>
+        <span class="node-tag">// SECURE_DATA_NODE //</span>
+        <span class="node-tag">// MASTER ARCHIVE: EPSTEIN NETWORK VIDEO LOGS (PART 2) //</span>
+        <h2>FINANCIAL NETWORKS & FLIGHT LOGS</h2>
+        <p style="color: #8b949e; font-size: 0.9rem;">Analysis of shell companies, associated flight manifests, institutional records, and cross-jurisdictional legal filings.</p>
         
-        <div class="intel-card">
-            <h3>// FEED 02: Palm Beach Estate Security Protocols & Local Law Enforcement Intercepts</h3>
-            <div class="video-container">
-                <iframe src="https://www.bitchute.com/embed/placeholder/" allowfullscreen></iframe>
+        <div class="feed-grid">
+            <div class="feed-card">
+                <h3>Feed 05: Financial Networks & Shell Companies</h3>
+                <iframe src="https://www.bitchute.com/embed/9tYDyv5b0LJS/"></iframe>
+                <a href="https://www.bitchute.com/video/9tYDyv5b0LJS/" target="_blank" class="external-link">Open on BitChute ↗</a>
+                <div class="dialogue-box">
+                    <strong>// INTEL BREAKDOWN:</strong> Audits FinCEN Suspicious Activity Reports (SARs) and offshore shell structures (including Financial Trust Co. in the U.S. Virgin Islands). Examines capital flows managed through major international banking institutions.
+                </div>
+                <div class="docs-section">
+                    <span>// VERIFIED PRIMARY SOURCES:</span>
+                    <a href="https://www.fincen.gov" target="_blank" class="doc-link">→ FinCEN Regulatory Frameworks ↗</a>
+                    <a href="https://www.sec.gov" target="_blank" class="doc-link">→ SEC Corporate Filings Database ↗</a>
+                </div>
             </div>
-            <p><strong>Forensic Overview:</strong> A granular review of the initial 2005–2006 Palm Beach Police Department investigation files. This feed details the recruitment networks operating out of local residential properties, employee scheduling logs, and witness statements outlining systemic security measures implemented across the estate.</p>
-            <p><strong>Investigative Context:</strong> Documentation obtained via public records requests highlights early friction between local municipal investigators and federal prosecutorial entities. The analysis breaks down how estate staff managed visitor entry logs, surveillance monitoring systems, and non-disclosure agreements designed to suppress victim reporting.</p>
-            <div class="sources-box">
-                <strong>Verified Public Sources & Citations:</strong>
-                <ul>
-                    <li><a href="https://vault.fbi.gov/jeffrey-epstein" target="_blank">FBI Vault: Federal Bureau of Investigation Epstein Case Files</a></li><li><a href="https://www.pbpd.org/" target="_blank">Palm Beach Police Department Initial Case Incident Reports</a></li><li><a href="https://www.opensanctions.org/" target="_blank">OpenSanctions Global Entity & Corporate Registry Database</a></li>
-                </ul>
+
+            <div class="feed-card">
+                <h3>Feed 06: Flight Logs & Associated Manifests</h3>
+                <iframe src="https://www.bitchute.com/embed/YKjoqFyH0EPG/"></iframe>
+                <a href="https://www.bitchute.com/video/YKjoqFyH0EPG/" target="_blank" class="external-link">Open on BitChute ↗</a>
+                <div class="dialogue-box">
+                    <strong>// INTEL BREAKDOWN:</strong> Cross-references FAA tail number registrations (specifically Boeing 727 N908JE and associated Gulfstream assets) with airport landing logs from Palm Beach International, Teterboro, and Cyril E. King Airport in St. Thomas.
+                </div>
+                <div class="docs-section">
+                    <span>// VERIFIED PRIMARY SOURCES:</span>
+                    <a href="https://registry.faa.gov" target="_blank" class="doc-link">→ FAA Aircraft Registry Database ↗</a>
+                    <a href="media-epstein-datasets.html" class="doc-link">→ DOJ Pool: Flight Manifest Archive</a>
+                </div>
+            </div>
+
+            <div class="feed-card">
+                <h3>Feed 07: Institutional Oversight & Testimony Breakdown</h3>
+                <iframe src="https://www.bitchute.com/embed/PBlq4k6B6Z6t/"></iframe>
+                <a href="https://www.bitchute.com/video/PBlq4k6B6Z6t/" target="_blank" class="external-link">Open on BitChute ↗</a>
+                <div class="dialogue-box">
+                    <strong>// INTEL BREAKDOWN:</strong> Examines tax-exempt Form 990 filings of private foundations linked to Epstein associates, detailing philanthropic grant-making and academic endowment compliance failures.
+                </div>
+                <div class="docs-section">
+                    <span>// VERIFIED PRIMARY SOURCES:</span>
+                    <a href="https://www.irs.gov/charities-non-profits/form-990-series-downloads" target="_blank" class="doc-link">→ IRS Tax-Exempt Organization Search ↗</a>
+                    <a href="https://www.taxexemptworld.com" target="_blank" class="doc-link">→ Foundation Financial Disclosures ↗</a>
+                </div>
+            </div>
+
+            <div class="feed-card">
+                <h3>Feed 08: Legal Filings & Depositions Analysis</h3>
+                <iframe src="https://www.bitchute.com/embed/xzaq4tipwqLu/"></iframe>
+                <a href="https://www.bitchute.com/video/xzaq4tipwqLu/" target="_blank" class="external-link">Open on BitChute ↗</a>
+                <div class="dialogue-box">
+                    <strong>// INTEL BREAKDOWN:</strong> Analyzes civil motions regarding protective orders, defamation counterclaims, and unsealed expert witness testimony regarding financial routing mechanisms.
+                </div>
+                <div class="docs-section">
+                    <span>// VERIFIED PRIMARY SOURCES:</span>
+                    <a href="https://www.courtlistener.com/docket/4355583/giuffre-v-maxwell/" target="_blank" class="doc-link">→ CourtListener Motion Filings Index ↗</a>
+                    <a href="https://www.uscourts.gov" target="_blank" class="doc-link">→ Federal Courts Rules & Procedure ↗</a>
+                </div>
+            </div>
+
+            <div class="feed-card">
+                <h3>Feed 09: Cross-Jurisdictional Records Review</h3>
+                <iframe src="https://www.bitchute.com/embed/QRoomp4MQJaA/"></iframe>
+                <a href="https://www.bitchute.com/video/QRoomp4MQJaA/" target="_blank" class="external-link">Open on BitChute ↗</a>
+                <div class="dialogue-box">
+                    <strong>// INTEL BREAKDOWN:</strong> Reviews territorial tax incentives (USVI Economic Development Authority agreements) and local property acquisitions utilized to establish jurisdictional insulation.
+                </div>
+                <div class="docs-section">
+                    <span>// VERIFIED PRIMARY SOURCES:</span>
+                    <a href="https://www.interpol.int" target="_blank" class="doc-link">→ International Border & Travel Records ↗</a>
+                    <a href="media-epstein-datasets.html" class="doc-link">→ USVI Territorial Subpoenas Index</a>
+                </div>
             </div>
         </div>
     </div>

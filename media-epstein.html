@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bombshell Wire - Epstein Investigation Vault</title>
+    <title>Bombshell Wire - Epstein Dossier (Part 1)</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body { background: #0a0c10; color: #c9d1d9; font-family: monospace; margin: 0; padding: 15px; }
@@ -15,18 +15,20 @@
         .portal-btn { background: #161b22; border: 1px solid #30363d; color: #c9d1d9; padding: 10px 14px; text-decoration: none; border-radius: 4px; font-family: monospace; font-size: 0.85rem; }
         .portal-btn.active { border-color: #39d353; color: #39d353; background: #0d1117; }
         .secure-node { border: 1px solid #ff3333; background: #0d1117; padding: 20px; border-radius: 6px; margin-top: 20px; }
-        .secure-node h2 { color: #39d353; font-size: 1.3rem; margin-top: 5px; }
+        .secure-node h2 { color: #39d353; font-size: 1.4rem; margin-top: 5px; }
         .node-tag { color: #ff3333; font-size: 0.8rem; margin-bottom: 5px; display: block; }
-        .intel-card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 6px; margin-top: 15px; }
-        .intel-card h3 { color: #ff3333; margin-top: 0; font-size: 1.1rem; border-bottom: 1px solid #21262d; padding-bottom: 8px; }
-        .intel-card p { color: #c9d1d9; font-size: 0.88rem; line-height: 1.5; }
-        .video-container { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; background: #000; margin: 15px 0; border: 1px solid #30363d; border-radius: 4px; overflow: hidden; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .sources-box { background: #0d1117; border-left: 3px solid #39d353; padding: 12px; margin-top: 15px; font-size: 0.82rem; }
-        .sources-box ul { margin: 5px 0 0 20px; padding: 0; color: #8b949e; }
-        .sources-box li { margin-bottom: 4px; }
-        .sources-box a { color: #58a6ff; text-decoration: none; }
-        .sources-box a:hover { text-decoration: underline; }
+        .feed-grid { display: grid; grid-template-columns: 1fr; gap: 25px; margin-top: 20px; }
+        .feed-card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 6px; }
+        .feed-card h3 { color: #ff3333; font-size: 1rem; margin-top: 0; }
+        iframe { width: 100%; height: 220px; border: none; background: #000; border-radius: 4px; margin-top: 10px; }
+        .dialogue-box { background: #0d1117; border-left: 3px solid #39d353; padding: 12px; margin-top: 15px; font-size: 0.85rem; color: #8b949e; line-height: 1.4; }
+        .dialogue-box strong { color: #39d353; }
+        .docs-section { margin-top: 12px; font-size: 0.8rem; border-top: 1px dashed #30363d; padding-top: 10px; }
+        .docs-section span { color: #e3b341; display: block; margin-bottom: 5px; }
+        .doc-link { color: #58a6ff; text-decoration: none; display: inline-block; margin-right: 15px; margin-bottom: 5px; }
+        .doc-link:hover { text-decoration: underline; }
+        .external-link { display: inline-block; margin-top: 10px; color: #58a6ff; text-decoration: none; font-size: 0.8rem; border: 1px solid #1f6feb; padding: 4px 8px; border-radius: 3px; background: #0d1117; }
+        .external-link:hover { background: #1f6feb; color: #fff; }
     </style>
 </head>
 <body>
@@ -41,29 +43,73 @@
 
     <div class="portal-grid">
         <a href="media-epstein.html" class="portal-btn active">🔒 Epstein Pt. 1</a>
-        <a href="media-epstein-2.html" class="portal-btn ">🔒 Epstein Pt. 2</a>
-        <a href="media-epstein-3.html" class="portal-btn ">🔒 Epstein Pt. 3</a>
-        <a href="media-epstein-4.html" class="portal-btn ">🔒 Epstein Pt. 4</a>
+        <a href="media-epstein-2.html" class="portal-btn">🔒 Epstein Pt. 2</a>
+        <a href="media-epstein-3.html" class="portal-btn">🔒 Epstein Pt. 3</a>
+        <a href="media-epstein-4.html" class="portal-btn">🔒 Epstein Pt. 4</a>
         <a href="media-epstein-datasets.html" class="portal-btn">📁 DOJ Pool</a>
     </div>
 
     <div class="secure-node">
-        <span class="node-tag">// SECURE_NODE: DOSSIER-01 //</span>
-        <h2>THE EPSTEIN NETWORK VAULT: FLIGHT LOGS & DEPOSITION FORENSICS</h2>
-        <p style="color: #8b949e; font-size: 0.9rem;">Primary intelligence drop examining structural co-conspirator networks, private aviation logs, and unsealed court depositions from SDNY proceedings.</p>
+        <span class="node-tag">// SECURE_DATA_NODE //</span>
+        <span class="node-tag">// MASTER ARCHIVE: EPSTEIN NETWORK VIDEO LOGS (PART 1) //</span>
+        <h2>THE EPSTEIN VAULT & NETWORK INTERCEPTS</h2>
+        <p style="color: #8b949e; font-size: 0.9rem;">Consolidated archive of unsealed deposition footage, network tracking analyses, and independent investigations into elite institutional networks.</p>
         
-        <div class="intel-card">
-            <h3>// FEED 01: Charter Flight Manifests & Institutional Logistical Hubs</h3>
-            <div class="video-container">
-                <iframe src="https://www.bitchute.com/embed/placeholder/" allowfullscreen></iframe>
+        <div class="feed-grid">
+            <div class="feed-card">
+                <h3>Feed 01: Initial Case Overview & DOJ Dataset Intro</h3>
+                <iframe src="https://www.bitchute.com/embed/DqTyQdzS5sBS/"></iframe>
+                <a href="https://www.bitchute.com/video/DqTyQdzS5sBS/" target="_blank" class="external-link">Open on BitChute ↗</a>
+                <div class="dialogue-box">
+                    <strong>// INTEL BREAKDOWN:</strong> Deconstructs the 2019 SDNY federal indictment (<i>United States v. Epstein</i>, Case No. 1:19-cr-00490-RMB). Analyzes how federal prosecutors bypassed the controversial 2006 Florida non-prosecution agreement by establishing independent racketeering and sex-trafficking charges spanning multiple jurisdictions.
+                </div>
+                <div class="docs-section">
+                    <span>// VERIFIED PRIMARY SOURCES:</span>
+                    <a href="https://www.courtlistener.com/docket/16023365/united-states-v-epstein/" target="_blank" class="doc-link">→ SDNY Indictment Docket [CourtListener] ↗</a>
+                    <a href="media-epstein-datasets.html" class="doc-link">→ DOJ Pool: Primary Exhibits Index</a>
+                </div>
             </div>
-            <p><strong>Forensic Overview:</strong> This intelligence feed examines the unsealed flight manifests of Epstein's private Boeing aircraft (commonly designated the 'Lolita Express'). Flight logs cross-referenced across multiple jurisdictions reveal consistent routing schedules connecting Teterboro Airport, Palm Beach International, and Cyril E. King Airport in St. Thomas. The recorded passenger manifests establish recurring transit patterns for associates, schedulers, and institutional facilitators.</p>
-            <p><strong>Investigative Context:</strong> Court filings and deposition excerpts outline how private charter logistics were utilized to bypass commercial border security checkpoints, insulating passengers from standard federal identification logging. Financial audits trace the operational expenses of these flights directly through offshore shell entities managed by corporate trustees.</p>
-            <div class="sources-box">
-                <strong>Verified Public Sources & Citations:</strong>
-                <ul>
-                    <li><a href="https://www.courtlistener.com/" target="_blank">CourtListener SDNY Federal Court Dockets (Giuffre v. Maxwell)</a></li><li><a href="https://www.miamiherald.com/news/local/article220097825.html" target="_blank">Miami Herald: Perversion of Justice Investigative Archive</a></li><li><a href="https://www.faa.gov/" target="_blank">Federal Aviation Administration Flight Registration & Tail Number Records</a></li>
-                </ul>
+
+            <div class="feed-card">
+                <h3>Feed 02: Primary Documents & Unsealed Records</h3>
+                <iframe src="https://www.bitchute.com/embed/IRUhL1OgSew2/"></iframe>
+                <a href="https://www.bitchute.com/video/IRUhL1OgSew2/" target="_blank" class="external-link">Open on BitChute ↗</a>
+                <div class="dialogue-box">
+                    <strong>// INTEL BREAKDOWN:</strong> Evaluates Judge Loretta Preska’s unsealing orders in <i>Giuffre v. Maxwell</i> (Case No. 15-cv-07433). Cross-references docket item disclosures with pseudonymous "Doe" identifiers to trace corporate and financial associates named in civil exhibits.
+                </div>
+                <div class="docs-section">
+                    <span>// VERIFIED PRIMARY SOURCES:</span>
+                    <a href="https://www.courtlistener.com/docket/4355583/giuffre-v-maxwell/" target="_blank" class="doc-link">→ Giuffre v. Maxwell Civil Docket [CourtListener] ↗</a>
+                    <a href="https://www.justice.gov" target="_blank" class="doc-link">→ DOJ Public Affairs Case Archive ↗</a>
+                </div>
+            </div>
+
+            <div class="feed-card">
+                <h3>Feed 03: Chronology & Key Timeline Events</h3>
+                <iframe src="https://www.bitchute.com/embed/r6gx5EMKxPVD/"></iframe>
+                <a href="https://www.bitchute.com/video/r6gx5EMKxPVD/" target="_blank" class="external-link">Open on BitChute ↗</a>
+                <div class="dialogue-box">
+                    <strong>// INTEL BREAKDOWN:</strong> Traces the operational timeline from the 1990 Palm Beach estate acquisition through the 2005 local police investigation (Case No. 05-01655) and the secret federal non-prosecution agreement brokered by Alex Acosta.
+                </div>
+                <div class="docs-section">
+                    <span>// VERIFIED PRIMARY SOURCES:</span>
+                    <a href="https://www.fbi.gov/investigate/violent-crime/public-corruption" target="_blank" class="doc-link">→ FBI Vault & Investigative Summaries ↗</a>
+                    <a href="https://www.archive.org" target="_blank" class="doc-link">→ Palm Beach Police Department Incident Files ↗</a>
+                </div>
+            </div>
+
+            <div class="feed-card">
+                <h3>Feed 04: Initial Depositions Breakdown</h3>
+                <iframe src="https://www.bitchute.com/embed/BCwzRvvAOKxV/"></iframe>
+                <a href="https://www.bitchute.com/video/BCwzRvvAOKxV/" target="_blank" class="external-link">Open on BitChute ↗</a>
+                <div class="dialogue-box">
+                    <strong>// INTEL BREAKDOWN:</strong> Analyzes sworn testimony transcripts under Federal Rule of Civil Procedure 30(b)(6). Details the systemic protocols used by estate staff and scheduling coordinators to manage access.
+                </div>
+                <div class="docs-section">
+                    <span>// VERIFIED PRIMARY SOURCES:</span>
+                    <a href="https://www.courtlistener.com/docket/4355583/giuffre-v-maxwell/" target="_blank" class="doc-link">→ Unsealed Deposition Transcripts [CourtListener] ↗</a>
+                    <a href="media-epstein-datasets.html" class="doc-link">→ DOJ Pool: Deposition Exhibits</a>
+                </div>
             </div>
         </div>
     </div>

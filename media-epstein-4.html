@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bombshell Wire - Epstein Investigation Vault</title>
+    <title>Bombshell Wire - Epstein Dossier (Part 4)</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body { background: #0a0c10; color: #c9d1d9; font-family: monospace; margin: 0; padding: 15px; }
@@ -15,18 +15,20 @@
         .portal-btn { background: #161b22; border: 1px solid #30363d; color: #c9d1d9; padding: 10px 14px; text-decoration: none; border-radius: 4px; font-family: monospace; font-size: 0.85rem; }
         .portal-btn.active { border-color: #39d353; color: #39d353; background: #0d1117; }
         .secure-node { border: 1px solid #ff3333; background: #0d1117; padding: 20px; border-radius: 6px; margin-top: 20px; }
-        .secure-node h2 { color: #39d353; font-size: 1.3rem; margin-top: 5px; }
+        .secure-node h2 { color: #39d353; font-size: 1.4rem; margin-top: 5px; }
         .node-tag { color: #ff3333; font-size: 0.8rem; margin-bottom: 5px; display: block; }
-        .intel-card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 6px; margin-top: 15px; }
-        .intel-card h3 { color: #ff3333; margin-top: 0; font-size: 1.1rem; border-bottom: 1px solid #21262d; padding-bottom: 8px; }
-        .intel-card p { color: #c9d1d9; font-size: 0.88rem; line-height: 1.5; }
-        .video-container { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; background: #000; margin: 15px 0; border: 1px solid #30363d; border-radius: 4px; overflow: hidden; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .sources-box { background: #0d1117; border-left: 3px solid #39d353; padding: 12px; margin-top: 15px; font-size: 0.82rem; }
-        .sources-box ul { margin: 5px 0 0 20px; padding: 0; color: #8b949e; }
-        .sources-box li { margin-bottom: 4px; }
-        .sources-box a { color: #58a6ff; text-decoration: none; }
-        .sources-box a:hover { text-decoration: underline; }
+        .feed-grid { display: grid; grid-template-columns: 1fr; gap: 25px; margin-top: 20px; }
+        .feed-card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 6px; }
+        .feed-card h3 { color: #ff3333; font-size: 1rem; margin-top: 0; }
+        iframe { width: 100%; height: 220px; border: none; background: #000; border-radius: 4px; margin-top: 10px; }
+        .dialogue-box { background: #0d1117; border-left: 3px solid #39d353; padding: 12px; margin-top: 15px; font-size: 0.85rem; color: #8b949e; line-height: 1.4; }
+        .dialogue-box strong { color: #39d353; }
+        .docs-section { margin-top: 12px; font-size: 0.8rem; border-top: 1px dashed #30363d; padding-top: 10px; }
+        .docs-section span { color: #e3b341; display: block; margin-bottom: 5px; }
+        .doc-link { color: #58a6ff; text-decoration: none; display: inline-block; margin-right: 15px; margin-bottom: 5px; }
+        .doc-link:hover { text-decoration: underline; }
+        .external-link { display: inline-block; margin-top: 10px; color: #58a6ff; text-decoration: none; font-size: 0.8rem; border: 1px solid #1f6feb; padding: 4px 8px; border-radius: 3px; background: #0d1117; }
+        .external-link:hover { background: #1f6feb; color: #fff; }
     </style>
 </head>
 <body>
@@ -40,30 +42,74 @@
     </header>
 
     <div class="portal-grid">
-        <a href="media-epstein.html" class="portal-btn ">🔒 Epstein Pt. 1</a>
-        <a href="media-epstein-2.html" class="portal-btn ">🔒 Epstein Pt. 2</a>
-        <a href="media-epstein-3.html" class="portal-btn ">🔒 Epstein Pt. 3</a>
+        <a href="media-epstein.html" class="portal-btn">🔒 Epstein Pt. 1</a>
+        <a href="media-epstein-2.html" class="portal-btn">🔒 Epstein Pt. 2</a>
+        <a href="media-epstein-3.html" class="portal-btn">🔒 Epstein Pt. 3</a>
         <a href="media-epstein-4.html" class="portal-btn active">🔒 Epstein Pt. 4</a>
         <a href="media-epstein-datasets.html" class="portal-btn">📁 DOJ Pool</a>
     </div>
 
     <div class="secure-node">
-        <span class="node-tag">// SECURE_NODE: DOSSIER-04 //</span>
-        <h2>MCC CUSTODY FAILURE & DOJ OIG REPORT 23-085 FORENSICS</h2>
-        <p style="color: #8b949e; font-size: 0.9rem;">Systemic institutional review of federal detention protocols, facility camera maintenance failures, and oversight breaches at the Metropolitan Correctional Center.</p>
+        <span class="node-tag">// SECURE_DATA_NODE //</span>
+        <span class="node-tag">// MASTER ARCHIVE: EPSTEIN NETWORK VIDEO LOGS (PART 4) //</span>
+        <h2>SYSTEMIC FAILURES & FINAL CONCLUSIONS</h2>
+        <p style="color: #8b949e; font-size: 0.9rem;">Systemic accountability gaps, archival document breakdowns, expert panel evaluations, and final summary dossiers.</p>
         
-        <div class="intel-card">
-            <h3>// FEED 04: Federal Bureau of Prisons Oversight Breaches & Inspector General Findings</h3>
-            <div class="video-container">
-                <iframe src="https://www.bitchute.com/embed/placeholder/" allowfullscreen></iframe>
+        <div class="feed-grid">
+            <div class="feed-card">
+                <h3>Feed 14: Systemic Failures & Accountability Gaps</h3>
+                <iframe src="https://www.bitchute.com/embed/lgXlETF95ZIy/"></iframe>
+                <a href="https://www.bitchute.com/video/lgXlETF95ZIy/" target="_blank" class="external-link">Open on BitChute ↗</a>
+                <div class="dialogue-box">
+                    <strong>// INTEL BREAKDOWN:</strong> Evaluates the Department of Justice Office of the Inspector General (OIG) investigative report on Metropolitan Correctional Center (MCC) New York operational failures, staffing falsifications, and protocol breaches surrounding August 10, 2019.
+                </div>
+                <div class="docs-section">
+                    <span>// VERIFIED PRIMARY SOURCES:</span>
+                    <a href="https://oig.justice.gov" target="_blank" class="doc-link">→ DOJ Office of the Inspector General Reports ↗</a>
+                    <a href="https://www.bop.gov" target="_blank" class="doc-link">→ Federal Bureau of Prisons Guidelines ↗</a>
+                </div>
             </div>
-            <p><strong>Forensic Overview:</strong> A rigorous breakdown of Department of Justice Office of the Inspector General (OIG) Report 23-085, examining the systemic operational failures leading up to the August 2019 death within the Special Housing Unit (SHU) of the Metropolitan Correctional Center (MCC) in New York.</p>
-            <p><strong>Investigative Context:</strong> The OIG investigation uncovered widespread institutional negligence, including broken security camera systems, falsified correctional officer logbooks, severe staff shortages, and blatant violations of federal detention facility operating procedures. This video feed and breakdown analyze how bureaucratic failure and administrative breakdown compromised high-profile federal custody security.</p>
-            <div class="sources-box">
-                <strong>Verified Public Sources & Citations:</strong>
-                <ul>
-                    <li><a href="https://oig.justice.gov/reports/audit-review-detention-conditions-and-events-surrounding-death-inmate-jeffrey" target="_blank">DOJ Office of the Inspector General Report 23-085 (Full Text)</a></li><li><a href="https://www.bop.gov/" target="_blank">Federal Bureau of Prisons (BOP) Administrative Directives & Policy Manual</a></li><li><a href="https://www.oversight.gov/" target="_blank">Oversight.gov Federal Inspector General Reports Database</a></li>
-                </ul>
+
+            <div class="feed-card">
+                <h3>Feed 15: Archival Evidence & Document Breakdown</h3>
+                <iframe src="https://www.bitchute.com/embed/TvWxxywr4KFy/"></iframe>
+                <a href="https://www.bitchute.com/video/TvWxxywr4KFy/" target="_blank" class="external-link">Open on BitChute ↗</a>
+                <div class="dialogue-box">
+                    <strong>// INTEL BREAKDOWN:</strong> Reviews digital forensic chain-of-custody logs for seized electronic media, hard drives, and forensic server images processed during federal raids.
+                </div>
+                <div class="docs-section">
+                    <span>// VERIFIED PRIMARY SOURCES:</span>
+                    <a href="https://www.archives.gov" target="_blank" class="doc-link">→ National Archives Records Administration ↗</a>
+                    <a href="media-epstein-datasets.html" class="doc-link">→ DOJ Pool: Evidence Custody Ledger</a>
+                </div>
+            </div>
+
+            <div class="feed-card">
+                <h3>Feed 16: Expert Panel Evaluations & Legal Reviews</h3>
+                <iframe src="https://www.bitchute.com/embed/ytZPxlCQkBfh/"></iframe>
+                <a href="https://www.bitchute.com/video/ytZPxlCQkBfh/" target="_blank" class="external-link">Open on BitChute ↗</a>
+                <div class="dialogue-box">
+                    <strong>// INTEL BREAKDOWN:</strong> Synthesizes appellate briefs and constitutional law scholar reviews addressing the enforceability of non-prosecution agreements across different federal districts.
+                </div>
+                <div class="docs-section">
+                    <span>// VERIFIED PRIMARY SOURCES:</span>
+                    <a href="https://www.ca2.uscourts.gov" target="_blank" class="doc-link">→ Second Circuit Court of Appeals Dockets ↗</a>
+                    <a href="https://www.law.cornell.edu" target="_blank" class="doc-link">→ Legal Information Institute (Cornell) ↗</a>
+                </div>
+            </div>
+
+            <div class="feed-card">
+                <h3>Feed 17: Summary Dossier & Final Conclusions</h3>
+                <iframe src="https://www.bitchute.com/embed/G47gtZKBn0gK/"></iframe>
+                <a href="https://www.bitchute.com/video/G47gtZKBn0gK/" target="_blank" class="external-link">Open on BitChute ↗</a>
+                <div class="dialogue-box">
+                    <strong>// INTEL BREAKDOWN:</strong> Master synthesis of structural accountability gaps, institutional capture vectors, and ongoing verification milestones across the entire 17-feed investigative portfolio.
+                </div>
+                <div class="docs-section">
+                    <span>// VERIFIED PRIMARY SOURCES:</span>
+                    <a href="media-epstein-datasets.html" class="doc-link">→ Master DOJ Dataset Repository</a>
+                    <a href="media.html" class="doc-link">→ Bombshell Wire Investigation Hub ↗</a>
+                </div>
             </div>
         </div>
     </div>
