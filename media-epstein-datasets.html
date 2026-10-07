@@ -1,172 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOJ Dataset Intel Pool | Bombshell Wire</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .classified-stamp {
-      display: inline-block;
-      border: 1px solid var(--accent-red);
-      color: var(--accent-red);
-      padding: 2px 8px;
-      font-size: 0.7rem;
-      letter-spacing: 2px;
-      font-weight: bold;
-      margin-bottom: 0.8rem;
-    }
-    .dataset-card {
-      background: #000;
-      border: 2px solid var(--terminal-green);
-      box-shadow: var(--cyber-glow);
-      padding: 1.5rem;
-      margin: 2rem 0;
-    }
-    .category-tabs {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      border-bottom: 1px dashed var(--border-color);
-      padding-bottom: 1rem;
-      flex-wrap: wrap;
-    }
-    .cat-tab {
-      padding: 8px 16px;
-      border: 1px solid var(--border-color);
-      background: rgba(0, 0, 0, 0.5);
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.85rem;
-      transition: all 0.2s ease;
-    }
-    .cat-tab.active {
-      border-color: var(--terminal-green);
-      color: var(--terminal-green);
-      background: rgba(0, 255, 65, 0.05);
-      font-weight: bold;
-    }
-    .cat-tab:hover {
-      border-color: var(--text-main);
-      color: var(--text-main);
-    }
-    .log-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-      font-size: 0.85rem;
-    }
-    .log-table th, .log-table td {
-      border: 1px solid var(--border-color);
-      padding: 10px;
-      text-align: left;
-      color: var(--text-muted);
-    }
-    .log-table th {
-      background: rgba(0, 255, 65, 0.05);
-      color: var(--terminal-green);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bombshell Wire - DOJ Pool & Datasets</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background: #0a0c10; color: #c9d1d9; font-family: monospace; margin: 0; padding: 15px; }
+        header { border-bottom: 1px solid #ff3333; padding-bottom: 10px; margin-bottom: 15px; }
+        .logo { color: #ff3333; font-weight: bold; font-size: 1.2rem; text-decoration: none; }
+        .nav-links { margin: 10px 0; font-size: 0.9rem; }
+        .nav-links a { color: #39d353; text-decoration: none; margin-right: 15px; }
+        .portal-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+        .portal-btn { background: #161b22; border: 1px solid #30363d; color: #c9d1d9; padding: 10px 14px; text-decoration: none; border-radius: 4px; font-family: monospace; font-size: 0.85rem; }
+        .portal-btn.active { border-color: #39d353; color: #39d353; background: #0d1117; }
+        .secure-node { border: 1px solid #ff3333; background: #0d1117; padding: 20px; border-radius: 6px; margin-top: 20px; }
+        .secure-node h2 { color: #39d353; font-size: 1.4rem; margin-top: 5px; }
+        .node-tag { color: #ff3333; font-size: 0.8rem; margin-bottom: 5px; display: block; }
+        .dataset-grid { display: grid; grid-template-columns: 1fr; gap: 25px; margin-top: 20px; }
+        .dataset-card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 6px; display: flex; flex-direction: column; gap: 12px; }
+        .card-visual-banner { background: #0d1117; border: 1px dashed #30363d; padding: 12px; border-radius: 4px; font-size: 0.75rem; color: #39d353; display: flex; justify-content: space-between; align-items: center; }
+        .card-visual-banner span { color: #8b949e; }
+        .dataset-card h3 { color: #ff3333; font-size: 1.05rem; margin: 0; }
+        .dataset-card p { color: #8b949e; font-size: 0.85rem; line-height: 1.4; margin: 0; }
+        .doc-link { color: #58a6ff; text-decoration: none; display: inline-block; margin-right: 12px; margin-top: 5px; font-size: 0.82rem; border: 1px solid #1f6feb; padding: 6px 12px; border-radius: 3px; background: #0d1117; }
+        .doc-link:hover { background: #1f6feb; color: #fff; }
+        .highlight-box { background: #1f1616; border-left: 3px solid #ff3333; padding: 12px; font-size: 0.85rem; color: #c9d1d9; line-height: 1.4; }
+    </style>
 </head>
 <body>
-  <header>
-    <a href="index.html" class="logo">🚨 BOMBSHELL WIRE</a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="articles.html">Investigations</a></li>
-        <li><a href="media.html" class="active" style="color: var(--terminal-green);">Video Drops</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <main>
-    <div style="margin-bottom: 1.5rem;">
-      <a href="media.html" class="nav-btn">← Back to Video Drops Hub</a>
-    </div>
-
-    <!-- Category Filter Tabs -->
-    <div class="category-tabs">
-      <a href="media.html" class="cat-tab">⚡ All Categories</a>
-      <a href="media-datacenter.html" class="cat-tab">🏭 Data Center Video Archives</a>
-      <a href="media-epstein.html" class="cat-tab">🔓 Epstein Network Video Logs</a>
-      <a href="media-epstein-datasets.html" class="cat-tab active">📁 DOJ Dataset Intel Pool</a>
-    </div>
-
-    <section class="card" style="border-color: var(--accent-red);">
-      <div class="classified-stamp">// OSINT INTEL POOL: DEPARTMENT OF JUSTICE DATASET 10 ARCHIVES //</div>
-      
-      <h1 style="font-size: 2.2rem; line-height: 1.1; margin-bottom: 1rem; color: var(--terminal-green);">
-        Unsealed DOJ Records & Media Evidence Index
-      </h1>
-      
-      <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6;">
-        Direct extraction from public Department of Justice unsealed file repositories (Dataset 10). This intel pool indexes primary source evidence, metadata logs, video files, and audit trails made accessible via community archiving platforms like <a href="https://silencedidthis.com/?file=Drop1.csv&v=gallery" target="_blank" class="inline-link">silencedidthis.com</a>.
-      </p>
-
-      <div class="dataset-card" style="border-color: var(--accent-red);">
-        <p style="color: var(--accent-red); font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 4px;">// DATASET 10 METADATA BREAKDOWN & COMMUNITY ANALYSIS //</p>
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5ln;">
-          The Department of Justice file releases have been subjected to intense independent public review. Independent metadata auditing reveals discrepancies in categorization, selective redactions, and timestamps across hundreds of individual logs ranging from Drop 1 through Drop 5.
-        </p>
-
-        <h3 style="color: var(--terminal-green); margin-top: 1.5rem; margin-bottom: 0.5rem;">// VERIFIED FILE ENTRY SAMPLES (DATASET 10) //</h3>
-        <div style="overflow-x: auto;">
-          <table class="log-table">
-            <thead>
-              <tr>
-                <th>File ID</th>
-                <th>Type</th>
-                <th>Source Link / Reference</th>
-                <th>Archival Notes & Metadata</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>EFTA01683424</strong></td>
-                <td>MP4</td>
-                <td><a href="https://justice.gov/epstein/files/DataSet%2010/EFTA01683424.mp4" target="_blank" style="color: var(--terminal-green);">DOJ Link</a></td>
-                <td>Interior residential footage; detailed property indexing and witness logs from unsealed discovery files.</td>
-              </tr>
-              <tr>
-                <td><strong>EFTA01683320</strong></td>
-                <td>MP4</td>
-                <td><a href="https://justice.gov/epstein/files/DataSet%2010/EFTA01683320.mp4" target="_blank" style="color: var(--terminal-green);">DOJ Link</a></td>
-                <td>Camcorder archival footage mounted during transit/transit analysis; duration logs spanning extended black screens.</td>
-              </tr>
-              <tr>
-                <td><strong>EFTA01682127</strong></td>
-                <td>M4A</td>
-                <td><a href="https://www.justice.gov/epstein/files/DataSet%2010/EFTA01682127.m4a" target="_blank" style="color: var(--terminal-green);">DOJ Link</a></td>
-                <td>Voicemail recording log from tipsters attempting to report recruitment pipelines around 2011.</td>
-              </tr>
-              <tr>
-                <td><strong>EFTA01683403</strong></td>
-                <td>MP4</td>
-                <td><a href="https://justice.gov/epstein/files/DataSet%2010/EFTA01683403.mp4" target="_blank" style="color: var(--terminal-green);">DOJ Link</a></td>
-                <td>Promotional digital flyer scan referencing wellness/educator networks in New York operating under affiliated organizational banners.</td>
-              </tr>
-            </tbody>
-          </table>
+    <header>
+        <a href="index.html" class="logo">🚨 BOMBSHELL WIRE</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="investigations.html">Investigations</a>
+            <a href="media.html">Video Drops</a>
         </div>
+    </header>
 
-        <h3 style="color: var(--terminal-green); margin-top: 1.5rem; margin-bottom: 0.5rem;">// INVESTIGATIVE TAKEAWAYS //</h3>
-        <ul style="list-style-type: none; padding-left: 1rem; margin-top: 1rem; color: var(--text-muted);">
-          <li>🔹 <strong>Systemic Redaction Patterns:</strong> Cross-referencing CSV drop indexes highlights heavy masking on peripheral personnel while leaving institutional paper trails exposed.</li>
-          <li>🔹 <strong>Decentralized Verification:</strong> Mirroring official DOJ releases onto independent open-source index pools ensures permanent public accountability against potential administrative takedowns or document scrubbing.</li>
-        </ul>
-      </div>
+    <div class="portal-grid">
+        <a href="media-epstein.html" class="portal-btn">🔒 Epstein Pt. 1</a>
+        <a href="media-epstein-2.html" class="portal-btn">🔒 Epstein Pt. 2</a>
+        <a href="media-epstein-3.html" class="portal-btn">🔒 Epstein Pt. 3</a>
+        <a href="media-epstein-4.html" class="portal-btn">🔒 Epstein Pt. 4</a>
+        <a href="media-epstein-datasets.html" class="portal-btn active">📁 DOJ Pool</a>
+    </div>
 
-      <!-- Navigation -->
-      <div class="page-navigation" style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 2.5rem; border-top: 1px dashed var(--border-color); padding-top: 1.5rem;">
-        <a href="media-epstein.html" class="nav-btn">← Epstein Video Logs</a>
-        <a href="media.html" class="nav-btn">Video Hub ↺</a>
-      </div>
-    </section>
-  </main>
+    <div class="secure-node">
+        <span class="node-tag">// SECURE_DATA_NODE //</span>
+        <span class="node-tag">// MASTER ARCHIVE: DOJ PRIMARY EXHIBITS & DATASETS //</span>
+        <h2>PRIMARY SOURCE REPOSITORY & COURT DOCUMENTS</h2>
+        <p style="color: #8b949e; font-size: 0.9rem;">Centralized index of federal indictments, unsealed deposition exhibits, flight manifests, and regulatory compliance records.</p>
+        
+        <div class="dataset-grid">
+            <div class="dataset-card" style="border-color: #39d353;">
+                <div class="card-visual-banner">
+                    <span>[DATA_FEED: SILENCEDIDTHIS.COM]</span>
+                    <span style="color: #39d353;">● ACTIVE REPOSITORY</span>
+                </div>
+                <h3>// EXTERNAL DROP REPOSITORY: silencedidthis.com (Drop1.csv Gallery)</h3>
+                <p>External public access index and data archiving platform designed to host raw CSV file drops, leaked index spreadsheets, and de-anonymized court document references bypassing mainstream information filters.</p>
+                <div class="highlight-box" style="border-color: #39d353; background: #0d1612;">
+                    <strong>// SITE ANALYSIS & DATA FEED:</strong> <strong>silencedidthis.com</strong> serves as an independent clearinghouse for structured data tables (`Drop1.csv`). The gallery view allows investigators to audit raw tabular data, entity cross-references, and metadata logs without corporate gatekeeper redactions.
+                </div>
+                <div>
+                    <a href="https://silencedidthis.com/?file=Drop1.csv&v=gallery" target="_blank" class="doc-link">Access silencedidthis.com (Drop1 Gallery) ↗</a>
+                </div>
+            </div>
 
-  <footer>
-    <p>&copy; 2026 Bombshell Wire. Open Source & Uncensored.</p>
-  </footer>
+            <div class="dataset-card" style="border-color: #ff3333;">
+                <div class="card-visual-banner">
+                    <span>[FEDERAL_WATCHDOG: OIG REPORT 23-085]</span>
+                    <span style="color: #ff3333;">● CLASSIFIED / UNSEALED</span>
+                </div>
+                <h3 style="color: #ff3333;">// CRITICAL DOSSIER: Jeffrey Epstein MCC Suicide & Custody Death Investigation</h3>
+                <p>The official, unredacted Department of Justice Office of the Inspector General (OIG) investigative report detailing the systemic failures, operational negligence, and protocol violations surrounding the August 10, 2019 death of Jeffrey Epstein inside the Special Housing Unit (SHU) at the Metropolitan Correctional Center (MCC) in New York.</p>
+                <div class="highlight-box">
+                    <strong>// INTEL BREAKDOWN & SUICIDE WATCH DOSSIER:</strong> Exposes the complete breakdown of federal prison oversight—including the removal from suicide watch, failure to assign a cellmate, falsification of institutional logs by guards Tova Noel and Michael Thomas, and malfunctioning tier security camera systems.
+                </div>
+                <div>
+                    <a href="https://oig.justice.gov/sites/default/files/reports/23-085.pdf" target="_blank" class="doc-link">Access Full OIG PDF Report (23-085) ↗</a>
+                    <a href="https://oig.justice.gov/reports/investigation-and-review-federal-bureau-prisons-custody-care-and-supervision-jeffrey" target="_blank" class="doc-link">Access DOJ OIG Summary Page ↗</a>
+                    <a href="https://www.govinfo.gov/app/details/GOVPUB-J37-PURL-gpo214716" target="_blank" class="doc-link">Access GovInfo Federal PURL Record ↗</a>
+                </div>
+            </div>
+
+            <div class="dataset-card">
+                <div class="card-visual-banner">
+                    <span>[COURT_DOCKETS: SDNY / GIUFFRE V. MAXWELL]</span>
+                    <span>● VERIFIED DOCKETS</span>
+                </div>
+                <h3>Dataset 02: SDNY Federal Indictment & Civil Dockets</h3>
+                <p>Complete primary court records, judge unsealing orders, and case dockets for <i>United States v. Epstein</i> (Case No. 1:19-cr-00490-RMB) and <i>Giuffre v. Maxwell</i> (Case No. 15-cv-07433).</p>
+                <div>
+                    <a href="https://www.courtlistener.com/docket/16023365/united-states-v-epstein/" target="_blank" class="doc-link">Access SDNY Docket [CourtListener] ↗</a>
+                    <a href="https://www.courtlistener.com/docket/4355583/giuffre-v-maxwell/" target="_blank" class="doc-link">Access Civil Docket [CourtListener] ↗</a>
+                </div>
+            </div>
+
+            <div class="dataset-card">
+                <div class="card-visual-banner">
+                    <span>[AVIATION_LOGS: FAA REGISTRY]</span>
+                    <span>● AIRCRAFT MANIFESTS</span>
+                </div>
+                <h3>Dataset 03: FAA Flight Manifests & Aircraft Registry</h3>
+                <p>FAA aircraft registration logs, tail number histories (Boeing 727 N908JE and Gulfstream assets), and airport landing records across Palm Beach, Teterboro, and St. Thomas.</p>
+                <div>
+                    <a href="https://registry.faa.gov" target="_blank" class="doc-link">Access FAA Registry ↗</a>
+                </div>
+            </div>
+
+            <div class="dataset-card">
+                <div class="card-visual-banner">
+                    <span>[FINANCIAL_AUDIT: FINCEN & IRS]</span>
+                    <span>● REGULATORY DATA</span>
+                </div>
+                <h3>Dataset 04: FinCEN & Corporate Financial Disclosures</h3>
+                <p>Suspicious Activity Report (SAR) regulatory frameworks, Form 990 tax-exempt filings of associated private foundations, and offshore trust records.</p>
+                <div>
+                    <a href="https://www.fincen.gov" target="_blank" class="doc-link">Access FinCEN Frameworks ↗</a>
+                    <a href="https://www.irs.gov/charities-non-profits/form-990-series-downloads" target="_blank" class="doc-link">Access IRS Form 990 Portal ↗</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
