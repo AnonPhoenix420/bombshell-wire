@@ -6,7 +6,6 @@
     <title>Bombshell Wire - Diquat Contamination Video Drop</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* BASE & BACKGROUND SYSTEM */
         body {
             background-color: #05070a;
             color: #c9d1d9;
@@ -16,8 +15,6 @@
             position: relative;
             min-height: 100vh;
         }
-
-        /* TOXIC GLOW & ATMOSPHERIC OVERLAY */
         body::before {
             content: "";
             position: fixed;
@@ -31,7 +28,6 @@
             z-index: -2;
             filter: grayscale(80%) contrast(140%);
         }
-
         body::after {
             content: "";
             position: fixed;
@@ -43,7 +39,6 @@
             pointer-events: none;
             z-index: -1;
         }
-
         header {
             border-bottom: 1px solid #ff3333;
             padding-bottom: 10px;
@@ -57,13 +52,11 @@
         .nav-links { margin: 10px 0; font-size: 0.9rem; }
         .nav-links a { color: #39d353; text-decoration: none; margin-right: 15px; }
         
-        /* PORTAL NAVIGATION TABS */
         .portal-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
         .portal-btn { background: rgba(22, 27, 34, 0.9); border: 1px solid #30363d; color: #c9d1d9; padding: 10px 14px; text-decoration: none; border-radius: 4px; font-family: monospace; font-size: 0.85rem; }
         .portal-btn.active { border-color: #58a6ff; color: #58a6ff; background: rgba(13, 17, 23, 0.95); }
         .portal-btn.dossier { border-color: #ff3333; color: #ff3333; }
 
-        /* DOSSIER & VIDEO CONTAINER */
         .secure-node { 
             border: 1px solid #58a6ff; 
             background: rgba(13, 17, 23, 0.92); 
@@ -76,7 +69,6 @@
         .secure-node h2 { color: #58a6ff; font-size: 1.4rem; margin-top: 5px; text-shadow: 0 0 5px rgba(88, 166, 255, 0.5); }
         .node-tag { color: #39d353; font-size: 0.8rem; margin-bottom: 5px; display: block; }
         
-        /* VIDEO PLAYER */
         .video-player-container {
             background: #000;
             border: 1px solid #30363d;
@@ -92,7 +84,6 @@
             display: block;
         }
 
-        /* METADATA BLOCK */
         .video-meta {
             background: rgba(22, 27, 34, 0.85);
             border: 1px solid #30363d;
@@ -104,7 +95,6 @@
         .meta-line { margin-bottom: 6px; color: #8b949e; }
         .meta-line strong { color: #c9d1d9; }
 
-        /* BODY & EVIDENCE STYLING */
         .content-body { line-height: 1.65; font-size: 0.95rem; color: #c9d1d9; }
         .content-body h3 { color: #39d353; margin-top: 25px; border-bottom: 1px dashed #30363d; padding-bottom: 5px; }
         .content-body p { margin-bottom: 15px; }
@@ -154,7 +144,7 @@
         <!-- DIRECT MP4 VIDEO PLAYER -->
         <div class="video-player-container">
             <video controls poster="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80">
-                <source src="Lil webby diquat.mp4" type="video/mp4">
+                <source src="lil webby diquat.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
