@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bombshell Wire - Diquat Contamination Video Drop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* BASE & BACKGROUND SYSTEM */
+        body {
+            background-color: #05070a;
+            color: #c9d1d9;
+            font-family: monospace;
+            margin: 0;
+            padding: 15px;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* TOXIC GLOW & ATMOSPHERIC OVERLAY */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(rgba(10, 12, 16, 0.88), rgba(5, 7, 10, 0.94)),
+                url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            z-index: -2;
+            filter: grayscale(80%) contrast(140%);
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(88, 166, 255, 0.08) 0%, transparent 80%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        header {
+            border-bottom: 1px solid #ff3333;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            background: rgba(13, 17, 23, 0.85);
+            backdrop-filter: blur(5px);
+            padding: 15px;
+            border-radius: 6px;
+        }
+        .logo { color: #ff3333; font-weight: bold; font-size: 1.2rem; text-decoration: none; }
+        .nav-links { margin: 10px 0; font-size: 0.9rem; }
+        .nav-links a { color: #39d353; text-decoration: none; margin-right: 15px; }
+        
+        /* PORTAL NAVIGATION TABS */
+        .portal-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+        .portal-btn { background: rgba(22, 27, 34, 0.9); border: 1px solid #30363d; color: #c9d1d9; padding: 10px 14px; text-decoration: none; border-radius: 4px; font-family: monospace; font-size: 0.85rem; }
+        .portal-btn.active { border-color: #58a6ff; color: #58a6ff; background: rgba(13, 17, 23, 0.95); }
+        .portal-btn.dossier { border-color: #ff3333; color: #ff3333; }
+
+        /* DOSSIER & VIDEO CONTAINER */
+        .secure-node { 
+            border: 1px solid #58a6ff; 
+            background: rgba(13, 17, 23, 0.92); 
+            backdrop-filter: blur(8px);
+            padding: 25px; 
+            border-radius: 6px; 
+            margin-top: 20px; 
+            box-shadow: 0 0 20px rgba(88, 166, 255, 0.15);
+        }
+        .secure-node h2 { color: #58a6ff; font-size: 1.4rem; margin-top: 5px; text-shadow: 0 0 5px rgba(88, 166, 255, 0.5); }
+        .node-tag { color: #39d353; font-size: 0.8rem; margin-bottom: 5px; display: block; }
+        
+        /* VIDEO PLAYER */
+        .video-player-container {
+            background: #000;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 8px;
+            margin: 20px 0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+        }
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+
+        /* METADATA BLOCK */
+        .video-meta {
+            background: rgba(22, 27, 34, 0.85);
+            border: 1px solid #30363d;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+        }
+        .meta-line { margin-bottom: 6px; color: #8b949e; }
+        .meta-line strong { color: #c9d1d9; }
+
+        /* BODY & EVIDENCE STYLING */
+        .content-body { line-height: 1.65; font-size: 0.95rem; color: #c9d1d9; }
+        .content-body h3 { color: #39d353; margin-top: 25px; border-bottom: 1px dashed #30363d; padding-bottom: 5px; }
+        .content-body p { margin-bottom: 15px; }
+        .content-body ul { margin-bottom: 15px; padding-left: 20px; }
+        .content-body li { margin-bottom: 8px; }
+
+        .highlight-box { 
+            background: rgba(22, 27, 34, 0.95); 
+            border-left: 4px solid #58a6ff; 
+            padding: 15px; 
+            margin: 20px 0; 
+            font-size: 0.9rem; 
+            color: #d2a8ff; 
+        }
+        .highlight-box strong { color: #ff3333; }
+
+        .docs-section { margin-top: 25px; font-size: 0.85rem; border-top: 1px dashed #30363d; padding-top: 15px; }
+        .docs-section span { color: #e3b341; display: block; margin-bottom: 8px; font-weight: bold; }
+        .doc-link { color: #58a6ff; text-decoration: none; display: inline-block; margin-right: 15px; margin-bottom: 8px; }
+        .doc-link:hover { text-decoration: underline; color: #79c0ff; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">🚨 BOMBSHELL WIRE</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="articles.html">Investigations</a>
+            <a href="media.html">Video Drops</a>
+        </div>
+    </header>
+
+    <!-- TOP NAVIGATION TABS -->
+    <div class="portal-grid">
+        <a href="articles.html" class="portal-btn">← Investigation Hub</a>
+        <a href="articles-diquat.html" class="portal-btn dossier">☣️ Diquat Contamination Audit</a>
+        <a href="media-diquat.html" class="portal-btn active">🎥 Diquat Media Drop ↗</a>
+        <a href="media.html" class="portal-btn">🎥 Main Video Drops ↗</a>
+    </div>
+
+    <div class="secure-node">
+        <span class="node-tag">// MEDIA_INTERCEPT_NODE //</span>
+        <span class="node-tag">// TARGET: CHRIS WEBBY / CONNECTICUT WATERWAY RESISTANCE //</span>
+        <h2>FIELD VIDEO INTERCEPT: CHRIS WEBBY ON DIQUAT CHEMICAL POISONING</h2>
+        <p style="color: #8b949e; font-size: 0.85rem;">Source File: <code>Lil webby diquat.mp4</code> | Direct Field Intercept & Citizen Oversight Log</p>
+        
+        <!-- DIRECT MP4 VIDEO PLAYER -->
+        <div class="video-player-container">
+            <video controls poster="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80">
+                <source src="Lil webby diquat.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- VIDEO METADATA BLOCK -->
+        <div class="video-meta">
+            <div class="meta-line"><strong>FILE ID:</strong> <code>LIL_WEBBY_DIQUAT_INTERCEPT.MP4</code></div>
+            <div class="meta-line"><strong>PRIMARY SUBJECT:</strong> Chris Webby (Connecticut Musical Artist & Environmental Advocate)</div>
+            <div class="meta-line"><strong>TARGET LOCATION:</strong> Lower Connecticut River Basin & Municipal Water Catchments</div>
+            <div class="meta-line"><strong>CHEMICAL TARGET:</strong> Diquat Dibromide (Bipyridyl Contact Herbicide)</div>
+            <div class="meta-line"><strong>CLASSIFICATION:</strong> Grassroots Resistance, Public Health Alert & Open Source Evidence</div>
+        </div>
+
+        <div class="content-body">
+            <h3>// INTERCEPT SUMMARY & FIELD GROUND TRUTH</h3>
+            <p>In this direct video log, Connecticut artist and community advocate <strong>Chris Webby</strong> mobilizes grassroots opposition against state environmental agencies and federal contractors deploying mass chemical treatments across public waterways. The target compound—<strong>Diquat Dibromide</strong>—is actively applied to suppress aquatic plant growth (such as invasive hydrilla), but independent water monitoring and toxicity research reveal serious ecological and organ system hazards.</p>
+
+            <p>Webby highlights the severe disconnect between domestic municipal practices and global safety standards, calling out why a chemical banned across the European Union is being routinely dumped into raw drinking water corridors and recreational river basins in America.</p>
+
+            <div class="highlight-box">
+                <strong>// EVIDENTIARY HIGHLIGHT: THE EU BAN PRECEDENT</strong>
+                <br>In 2018, the European Chemicals Agency (ECHA) and European Commission formally non-renewed approval for Diquat Dibromide citing non-target aquatic organism destruction, worker exposure risks, and severe mucosal/organ toxicity.
+            </div>
+
+            <h3>// PRIMARY INVESTIGATIVE DOCKETS & SOURCE BACKUPS</h3>
+            <p>For independent journalists, legal teams, and community defense networks compiling statutory filings or public records requests, utilize these primary dockets and verified references:</p>
+
+            <ul>
+                <li><strong>Citizen Moratorium Campaign:</strong> Over 10,000+ residents signed demanding an immediate halt to diquat applications in favor of mechanical harvesting and biological management.</li>
+                <li><strong>Clean Water Act (33 U.S.C. § 1251):</strong> Chemical applications without comprehensive NPDES permit compliance subject municipal operators to direct strict liability for toxic runoff.</li>
+                <li><strong>Anoxia & Bio-Collapse:</strong> Rapid tissue destruction from diquat causes sudden plant decay, dropping dissolved oxygen levels to lethal lows and triggering secondary cyanobacteria (toxic algae) blooms.</li>
+            </ul>
+
+            <!-- CLICKABLE SOURCES & DOCKETS -->
+            <div class="docs-section">
+                <span>// VERIFIED PRIMARY SOURCES & EXTERNAL LINKS:</span>
+                <a href="https://www.change.org/p/stop-the-diquat-chemical-poisoning-of-connecticut-s-waterways" target="_blank" class="doc-link">→ Connecticut Diquat Moratorium Petition & Docket ↗</a>
+                <a href="https://ctmirror.org/2025/07/03/diquat-hydrilla-ct-river/" target="_blank" class="doc-link">→ CT Mirror: Hydrilla Spraying & Diquat Controversy ↗</a>
+                <a href="https://echa.europa.eu/substance-information/-/substanceinfo/100.001.378" target="_blank" class="doc-link">→ European Chemicals Agency (ECHA): Diquat Prohibition Mandate ↗</a>
+                <a href="articles-diquat.html" class="doc-link">☣️ Read the Full Diquat Contamination Audit Dossier →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION TABS -->
+    <div class="portal-grid" style="margin-top: 30px;">
+        <a href="articles.html" class="portal-btn">← Investigation Hub</a>
+        <a href="articles-diquat.html" class="portal-btn dossier">☣️ Diquat Contamination Audit</a>
+        <a href="media-diquat.html" class="portal-btn active">🎥 Diquat Media Drop ↗</a>
+        <a href="media.html" class="portal-btn">🎥 Main Video Drops ↗</a>
+    </div>
+</body>
+</html>
