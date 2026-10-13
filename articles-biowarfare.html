@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- BUILD_TIMESTAMP: 2026-10-12-FORCED_REFRESH -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bombshell Wire - Biological Warfare & Gain-of-Function Audit Dossier</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #05070a;
+            color: #c9d1d9;
+            font-family: monospace;
+            margin: 0;
+            padding: 15px;
+            position: relative;
+            min-height: 100vh;
+        }
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 51, 51, 0.08) 0%, transparent 80%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        header {
+            border-bottom: 1px solid #ff3333;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            background: rgba(13, 17, 23, 0.85);
+            backdrop-filter: blur(5px);
+            padding: 15px;
+            border-radius: 6px;
+        }
+        .logo { color: #ff3333; font-weight: bold; font-size: 1.2rem; text-decoration: none; }
+        .nav-links { margin: 10px 0; font-size: 0.9rem; }
+        .nav-links a { color: #39d353; text-decoration: none; margin-right: 15px; }
+        
+        .portal-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+        .portal-btn { background: rgba(22, 27, 34, 0.9); border: 1px solid #30363d; color: #c9d1d9; padding: 10px 14px; text-decoration: none; border-radius: 4px; font-family: monospace; font-size: 0.85rem; }
+        .portal-btn.active { border-color: #ff3333; color: #ff3333; background: rgba(13, 17, 23, 0.95); }
+
+        .secure-node { 
+            border: 1px solid #ff3333; 
+            background: rgba(13, 17, 23, 0.92); 
+            backdrop-filter: blur(8px);
+            padding: 25px; 
+            border-radius: 6px; 
+            margin-top: 20px; 
+            box-shadow: 0 0 20px rgba(255, 51, 51, 0.15);
+        }
+        .secure-node h2 { color: #ff3333; font-size: 1.4rem; margin-top: 5px; text-shadow: 0 0 5px rgba(255, 51, 51, 0.5); }
+        .node-tag { color: #39d353; font-size: 0.8rem; margin-bottom: 5px; display: block; }
+        
+        .content-body { line-height: 1.65; font-size: 0.95rem; color: #c9d1d9; }
+        .content-body h3 { color: #39d353; margin-top: 25px; border-bottom: 1px dashed #30363d; padding-bottom: 5px; }
+        .content-body p { margin-bottom: 15px; }
+
+        .dialogue-box {
+            background: rgba(22, 27, 34, 0.95);
+            border-left: 4px solid #ff3333;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            line-height: 1.65;
+            box-shadow: inset 0 0 10px rgba(255, 51, 51, 0.05);
+        }
+        .dialogue-speaker-1 { color: #58a6ff; font-weight: bold; margin-bottom: 6px; display: block; border-bottom: 1px dashed #30363d; padding-bottom: 4px; }
+        .dialogue-speaker-2 { color: #ff3333; font-weight: bold; margin-top: 18px; margin-bottom: 6px; display: block; border-bottom: 1px dashed #30363d; padding-bottom: 4px; }
+
+        .backup-dialog-box {
+            background: rgba(13, 17, 23, 0.98);
+            border: 1px solid #ff3333;
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 0 15px rgba(255, 51, 51, 0.15);
+        }
+        .backup-dialog-box h4 {
+            color: #ff3333;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            border-bottom: 1px dashed #30363d;
+            padding-bottom: 8px;
+        }
+        .archive-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .archive-link-btn {
+            background: rgba(22, 27, 34, 0.9);
+            border: 1px solid #30363d;
+            color: #58a6ff;
+            padding: 12px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+        .archive-link-btn:hover {
+            border-color: #58a6ff;
+            background: rgba(30, 36, 48, 0.95);
+            color: #79c0ff;
+        }
+        .archive-link-btn span.source-tag {
+            color: #39d353;
+            font-size: 0.75rem;
+            border: 1px solid #39d353;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .docs-section { margin-top: 25px; font-size: 0.85rem; border-top: 1px dashed #30363d; padding-top: 15px; }
+        .docs-section span { color: #e3b341; display: block; margin-bottom: 8px; font-weight: bold; }
+        .doc-link { color: #58a6ff; text-decoration: none; display: inline-block; margin-right: 15px; margin-bottom: 8px; }
+        .doc-link:hover { text-decoration: underline; color: #79c0ff; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo">🚨 BOMBSHELL WIRE</a>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./articles.html">Investigations</a>
+            <a href="./media.html">Video Drops</a>
+        </div>
+    </header>
+
+    <!-- NAVIGATION TAB: SWITCH DIRECTLY TO VIDEO NODE -->
+    <div class="portal-grid">
+        <a href="./articles.html" class="portal-btn">← Main Investigation Hub</a>
+        <a href="./media-biowarfare.html" class="portal-btn active">🎥 Stream Biowarfare Video Drop ↗</a>
+    </div>
+
+    <div class="secure-node">
+        <span class="node-tag">// INVESTIGATIVE_DOSSIER_NODE //</span>
+        <span class="node-tag">// CLASSIFICATION: DEEP-STATE BIOWARFARE AUDIT //</span>
+        <h2>GAIN-OF-FUNCTION & BIOLOGICAL WARFARE INFILTRATION</h2>
+        <p style="color: #8b949e; font-size: 0.85rem;">Target Subjects: GoF Research, mRNA Platforms, CRISPR Genomic Targeting, Biometric Surveillance | Inter-Agency Audit</p>
+
+        <div class="content-body">
+            <h3>// EXECUTIVE AUDIT: DUAL-USE BIOLOGICAL INFRASTRUCTURE</h3>
+            <p>Modern biological warfare does not rely exclusively on traditional weaponized aerosolization. Instead, dual-use Gain-of-Function (GoF) research operates under the guise of pandemic preparedness while engineering biological agents to enhance transmissibility, cellular tropism, and immune evasion across targeted populations.</p>
+
+            <!-- DEEP-DIVE CYBERPUNK WHISTLEBLOWER DIALOGUE -->
+            <div class="dialogue-box">
+                <span class="dialogue-speaker-1">// DESK CHIEF [ENCRYPTED INTERCEPT]:</span>
+                "We are auditing the paper trail connecting federal research grants to international sub-agencies. What is the operational reality behind Gain-of-Function and synthetic biology deployment?"
+
+                <span class="dialogue-speaker-2">// INTELLIGENCE ANALYST [UNMASKING DESK]:</span>
+                "Gain-of-Function isn't just academic study; it's dual-use bioweaponry. By taking wild-type viral isolates and applying force-passaging alongside genetic splicing techniques, research facilities weaponize natural pathogens. Contractual networks link the National Institutes of Health (NIH) directly to DARPA's Pandemic Prevention Program (P3), routing capital through third-party intermediaries to bypass domestic oversight."
+
+                <span class="dialogue-speaker-1">// DESK CHIEF [ENCRYPTED INTERCEPT]:</span>
+                "How do mRNA lipid nanoparticle vectors and CRISPR Cas9 systems factor into targeted genetic vectors?"
+
+                <span class="dialogue-speaker-2">// INTELLIGENCE ANALYST [UNMASKING DESK]:</span>
+                "Lipid nanoparticles act as cellular delivery vehicles capable of crossing blood-brain barriers and delivering synthetic genetic instructions directly into cellular machinery. Combined with CRISPR gene-editing capabilities, genetic targeting moves from theoretical biological science to actionable surveillance and population-level genetic manipulation. Sub-agencies under DISA, CIA, and FBI maintain biometric data collection frameworks that interface directly with global health authority protocols."
+            </div>
+
+            <h3>// PRIMARY VERIFIED DOCKETS & AGENCY SOURCES</h3>
+            <p>Auditing the official public health and biosecurity record requires direct review of primary federal and global regulatory files:</p>
+
+            <div class="backup-dialog-box">
+                <h4>// VERIFIED GOVERNMENT DOCKETS & RESEARCH FILES</h4>
+                <div class="archive-grid">
+                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7107371/" target="_blank" class="archive-link-btn">
+                        <span>→ NIH PubMed Central: Gain-of-Function Research Historical Analysis</span>
+                        <span class="source-tag">Scientific Docket</span>
+                    </a>
+                    <a href="https://www.darpa.mil/sites/default/files/Preventing_Pandemics_Vignette_Final_210208.pdf" target="_blank" class="archive-link-btn">
+                        <span>→ DARPA Official Archive: Pandemic Prevention Platform (P3) Framework</span>
+                        <span class="source-tag">Defense Logistics</span>
+                    </a>
+                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1326439/" target="_blank" class="archive-link-btn">
+                        <span>→ US National Library of Medicine: History of Biological Warfare Studies</span>
+                        <span class="source-tag">Public Health Docket</span>
+                    </a>
+                    <a href="https://echa.europa.eu/" target="_blank" class="archive-link-btn">
+                        <span>→ European Chemicals Agency (ECHA) Biological Substance Database</span>
+                        <span class="source-tag">Global Authority</span>
+                    </a>
+                    <a href="https://www.who.int/" target="_blank" class="archive-link-btn">
+                        <span>→ World Health Organization (WHO) International Health Regulations</span>
+                        <span class="source-tag">Global Authority</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="docs-section">
+                <span>// VIDEO INTERCEPT CROSS-LINK:</span>
+                <a href="./media-biowarfare.html" class="doc-link">🎥 Watch the Unmasking Part 4 BitChute Secure Stream →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION TAB -->
+    <div class="portal-grid" style="margin-top: 30px;">
+        <a href="./articles.html" class="portal-btn">← Main Investigation Hub</a>
+        <a href="./media-biowarfare.html" class="portal-btn active">🎥 Stream Biowarfare Video Drop ↗</a>
+    </div>
+</body>
+</html>
