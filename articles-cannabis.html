@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- BUILD_TIMESTAMP: 2026-10-24-LOCAL_EXPANDED_AUDIT -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bombshell Wire - Machinery of Control: Deconstructing Cannabis Prohibition (Part 1)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #05070a;
+            color: #c9d1d9;
+            font-family: monospace;
+            margin: 0;
+            padding: 15px;
+            position: relative;
+            min-height: 100vh;
+        }
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(57, 211, 83, 0.08) 0%, transparent 80%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        header {
+            border-bottom: 1px solid #39d353;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            background: rgba(13, 17, 23, 0.85);
+            backdrop-filter: blur(5px);
+            padding: 15px;
+            border-radius: 6px;
+        }
+        .logo { color: #39d353; font-weight: bold; font-size: 1.2rem; text-decoration: none; }
+        .nav-links { margin: 10px 0; font-size: 0.9rem; }
+        .nav-links a { color: #39d353; text-decoration: none; margin-right: 15px; }
+        
+        .portal-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+        .portal-btn { background: rgba(22, 27, 34, 0.9); border: 1px solid #30363d; color: #c9d1d9; padding: 10px 14px; text-decoration: none; border-radius: 4px; font-family: monospace; font-size: 0.85rem; }
+        .portal-btn.active { border-color: #39d353; color: #39d353; background: rgba(13, 17, 23, 0.95); font-weight: bold; }
+
+        .secure-node { 
+            border: 1px solid #39d353; 
+            background: rgba(13, 17, 23, 0.92); 
+            backdrop-filter: blur(8px);
+            padding: 25px; 
+            border-radius: 6px; 
+            margin-top: 20px; 
+            box-shadow: 0 0 20px rgba(57, 211, 83, 0.15);
+        }
+        .secure-node h2 { color: #39d353; font-size: 1.4rem; margin-top: 5px; text-shadow: 0 0 5px rgba(57, 211, 83, 0.5); }
+        .node-tag { color: #39d353; font-size: 0.8rem; margin-bottom: 5px; display: block; }
+        
+        .content-body { line-height: 1.65; font-size: 0.95rem; color: #c9d1d9; }
+        .content-body h3 { color: #39d353; margin-top: 25px; border-bottom: 1px dashed #30363d; padding-bottom: 5px; }
+        .content-body p { margin-bottom: 15px; }
+
+        .dialogue-box {
+            background: rgba(22, 27, 34, 0.95);
+            border-left: 4px solid #39d353;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            line-height: 1.65;
+            box-shadow: inset 0 0 10px rgba(57, 211, 83, 0.05);
+        }
+        .dialogue-speaker-1 { color: #58a6ff; font-weight: bold; margin-bottom: 6px; display: block; border-bottom: 1px dashed #30363d; padding-bottom: 4px; }
+        .dialogue-speaker-2 { color: #39d353; font-weight: bold; margin-top: 18px; margin-bottom: 6px; display: block; border-bottom: 1px dashed #30363d; padding-bottom: 4px; }
+
+        .backup-dialog-box {
+            background: rgba(13, 17, 23, 0.98);
+            border: 1px solid #39d353;
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 0 15px rgba(57, 211, 83, 0.15);
+        }
+        .backup-dialog-box h4 {
+            color: #39d353;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            border-bottom: 1px dashed #30363d;
+            padding-bottom: 8px;
+        }
+        .archive-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .archive-link-btn {
+            background: rgba(22, 27, 34, 0.9);
+            border: 1px solid #30363d;
+            color: #58a6ff;
+            padding: 12px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+        .archive-link-btn:hover {
+            border-color: #58a6ff;
+            background: rgba(30, 36, 48, 0.95);
+            color: #79c0ff;
+        }
+        .archive-link-btn span.source-tag {
+            color: #39d353;
+            font-size: 0.75rem;
+            border: 1px solid #39d353;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .docs-section { margin-top: 25px; font-size: 0.85rem; border-top: 1px dashed #30363d; padding-top: 15px; }
+        .doc-link { color: #58a6ff; text-decoration: none; display: inline-block; margin-right: 15px; margin-bottom: 8px; }
+        .doc-link:hover { text-decoration: underline; color: #79c0ff; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo">🚨 BOMBSHELL WIRE</a>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./articles.html">Investigations</a>
+            <a href="./media.html">Video Drops</a>
+        </div>
+    </header>
+
+    <!-- NAVIGATION TAB MATRIX -->
+    <div class="portal-grid">
+        <a href="./articles.html" class="portal-btn">← Main Investigation Hub</a>
+        <a href="./articles-cannabis.html" class="portal-btn active">Part 1: Origins & Industrial Monopolies</a>
+        <a href="./articles-cannabis2.html" class="portal-btn">Part 2: Modern Suppression →</a>
+        <a href="./articles-cannabis3.html" class="portal-btn">Part 3: Medical Efficacy →</a>
+        <a href="./media.html" class="portal-btn" style="border-color: #58a6ff; color: #58a6ff;">🎥 Access Video Intercepts ↗</a>
+    </div>
+
+    <div class="secure-node">
+        <span class="node-tag">// INVESTIGATIVE_DOSSIER_NODE // CANNABIS SERIES PART 01 //</span>
+        <span class="node-tag">// CLASSIFICATION: CORPORATE MONOPOLIES & PROHIBITION ORIGINS //</span>
+        <h2>THE MACHINERY OF CONTROL: ORIGINS OF CANNABIS PROHIBITION</h2>
+        <p style="color: #8b949e; font-size: 0.85rem;">Target Subjects: Harry Anslinger, Marihuana Tax Act of 1937, Industrial Hemp vs Synthetic Petrochemicals, DuPont, Mellon Financial Empire, Hearst Yellow Journalism, AMA Suppression</p>
+
+        <div class="content-body">
+            <h3>// HISTORICAL DECONSTRUCTION: INDUSTRIAL MONOPOLIES & CORPORATE CAPTURE</h3>
+            <p>The criminalization of cannabis was never a grassroots public safety movement, nor was it born out of scientific or clinical consensus. For centuries prior to 1937, <i>Cannabis Sativa L.</i> was listed in the official United States Pharmacopeia as an effective medicine for over twenty distinct conditions, manufactured by pharmaceutical pioneers like Eli Lilly, Parke-Davis, and Squibb. Simultaneously, industrial hemp served as the bedrock of global textiles, canvas, paper, cordage, and organic bio-oils.</p>
+
+            <p>The total outlawing of the plant was engineered through a deliberate alliance between bureaucratic power, private petrochemical interests, paper publishing conglomerates, and federal enforcement agencies seeking expansion after the collapse of Alcohol Prohibition.</p>
+
+            <!-- EXPANDED WHISTLEBLOWER INTERCEPT DIALOGUE -->
+            <div class="dialogue-box">
+                <span class="dialogue-speaker-1">// DESK CHIEF [ENCRYPTED SIGNAL]:</span>
+                "Map out the exact corporate nexus that orchestrated the 1937 ban. Who were the main power players behind the Marihuana Tax Act?"
+
+                <span class="dialogue-speaker-2">// INTELLIGENCE ANALYST [UNMASKING DESK]:</span>
+                "Follow the money trail across three interconnected empires: Treasury Secretary Andrew Mellon, the DuPont Chemical Corporation, and newsprint mogul William Randolph Hearst. 
+
+                In 1930, Andrew Mellon—one of the wealthiest men in America and head of the U.S. Treasury—appointed his niece's husband, Harry J. Anslinger, as the first commissioner of the newly created Federal Bureau of Narcotics (FBN). Mellon was also the primary financier and major shareholder of E.I. du Pont de Nemours and Company (DuPont). In the mid-1930s, DuPont patented synthetic petrochemical processes for producing Nylon, synthetic plastics, and sulfur-based chemical bleaching agents for wood-pulp paper. 
+
+                Industrial hemp was a direct, low-cost competitor to almost every single DuPont patent. Hemp produces up to four times as much fiber per acre as timber, requires zero chemical fertilizers or synthetic bleaching agents, and produces biodegradable plastics."
+
+                <span class="dialogue-speaker-1">// DESK CHIEF [ENCRYPTED SIGNAL]:</span>
+                "How did William Randolph Hearst fit into the industrial coalition?"
+
+                <span class="dialogue-speaker-2">// INTELLIGENCE ANALYST [UNMASKING DESK]:</span>
+                "Hearst owned thousands of acres of timberland to supply paper for his nationwide newspaper network. The invention of the mechanical decorticating machine in the 1930s meant hemp was suddenly poised to destroy the wood-pulp newsprint industry. Hearst used his massive tabloid syndicate to launch a nationwide yellow journalism crusade—coining the unfamiliar term 'Marihuana' to obscure its identity as the familiar medicine 'Cannabis' and industrial 'Hemp'. 
+
+                Hearst papers ran sensationalized, fabricated stories claiming 'marihuana' caused immediate madness, violence, and criminal depravity, specifically targeting African American, Mexican, and immigrant communities to trigger moral panic."
+
+                <span class="dialogue-speaker-1">// DESK CHIEF [ENCRYPTED SIGNAL]:</span>
+                "What happened when the medical community tried to challenge Anslinger's claims before Congress?"
+
+                <span class="dialogue-speaker-2">// INTELLIGENCE ANALYST [UNMASKING DESK]:</span>
+                "The American Medical Association (AMA) sent Dr. William C. Woodward, legislative counsel for the AMA, to testify before Congress in May 1937. Dr. Woodward condemned the bill, testifying under oath that the FBN had produced zero objective scientific data proving cannabis was a violent danger, and pointing out that doctors had been using cannabis tinctures safely for decades without addiction or violence.
+
+                Congress ignored Dr. Woodward completely. To bypass Constitutional limits on federal police powers, Anslinger and Treasury lawyers drafted the Marihuana Tax Act as a revenue measure. It created a bureaucratic Catch-22: anyone possessing or selling cannabis was required to purchase a federal revenue stamp, but the FBN refused to issue the stamps. Possession without a stamp became a federal felony. Overnight, an ancient agricultural resource and legitimate medicine was eliminated to protect private corporate monopolies."
+            </div>
+
+            <h3>// ARCHIVAL EVIDENCE & LEGISLATIVE DOCKETS</h3>
+            <p>Declassifying the institutional machinery requires direct review of primary historical legislation, Congressional hearing transcripts, and official government records:</p>
+
+            <div class="backup-dialog-box">
+                <h4>// VERIFIED LEGISLATIVE & HISTORICAL FILES</h4>
+                <div class="archive-grid">
+                    <a href="https://en.wikipedia.org/wiki/Marihuana_Tax_Act_of_1937" target="_blank" class="archive-link-btn">
+                        <span>→ US Congress Archive: Marihuana Tax Act of 1937 Hearings & Legislative History</span>
+                        <span class="source-tag">Legislative Docket</span>
+                    </a>
+                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7173675/" target="_blank" class="archive-link-btn">
+                        <span>→ NIH PubMed Central: Historical Analysis of Cannabis Prohibition & Policy</span>
+                        <span class="source-tag">Scientific Docket</span>
+                    </a>
+                    <a href="https://www.britannica.com/topic/War-on-Drugs" target="_blank" class="archive-link-btn">
+                        <span>→ Federal Bureau of Narcotics (FBN) & Controlled Substances Historical Records</span>
+                        <span class="source-tag">Public Record</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="docs-section">
+                <span>// DOSSIER NAVIGATION:</span>
+                <a href="./articles-cannabis2.html" class="doc-link">☣️ Proceed to Part 2: Modern Suppression & Suppression Tactics →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION MATRIX -->
+    <div class="portal-grid" style="margin-top: 30px;">
+        <a href="./articles.html" class="portal-btn">← Main Investigation Hub</a>
+        <a href="./articles-cannabis2.html" class="portal-btn">Proceed to Part 2: Modern Suppression →</a>
+        <a href="./media.html" class="portal-btn" style="border-color: #58a6ff; color: #58a6ff;">🎥 Access Video Intercepts ↗</a>
+    </div>
+</body>
+</html>
