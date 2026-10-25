@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- BUILD_TIMESTAMP: 2026-10-24-LOCAL_MEDIA_HUB_WORKING_IMG -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video Drops | Bombshell Wire</title>
@@ -71,6 +72,13 @@
     .cat-tab.biowarfare-tab:hover {
       background: rgba(255, 51, 51, 0.1);
     }
+    .cat-tab.cannabis-tab {
+      border-color: var(--terminal-green);
+      color: var(--terminal-green);
+    }
+    .cat-tab.cannabis-tab:hover {
+      background: rgba(57, 211, 83, 0.1);
+    }
     .cat-tab:hover {
       border-color: var(--text-main);
       color: var(--text-main);
@@ -98,6 +106,7 @@
     <!-- Category Filter Tabs -->
     <div class="category-tabs">
       <a href="./media.html" class="cat-tab active">⚡ All Categories</a>
+      <a href="./media-cannabis.html" class="cat-tab cannabis-tab">🌿 Cannabis Intercept Suite ↗</a>
       <a href="./media-biowarfare.html" class="cat-tab biowarfare-tab">☣️ Biowarfare & Gain-of-Function Drops ↗</a>
       <a href="./media-diquat.html" class="cat-tab diquat-tab">🎥 Diquat Contamination Media Drops ↗</a>
       <a href="./media-datacenter.html" class="cat-tab">🏭 Data Center Video Archives</a>
@@ -107,12 +116,24 @@
     <!-- Video Grid Hub -->
     <div class="video-grid">
       
+      <!-- Card: Cannabis Legalization & Plant Medicine Video Archive -->
+      <article class="video-card" style="border-color: var(--terminal-green);">
+        <div>
+          <!-- Using the proven working image source -->
+          <img src="https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&w=900&q=80" alt="Cannabis Plant Medicine Archive" class="video-thumb">
+          <p style="font-size: 0.75rem; color: var(--terminal-green); letter-spacing: 1px;">// VIDEO INTERCEPT: PLANT MEDICINE & ONCOLOGY</p>
+          <h2><a href="./media-cannabis.html" style="color: var(--terminal-green); text-decoration: none;">Cannabis Video Intercept Archive (Pages 1 & 2)</a></h2>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Declassified video intercepts covering Dr. Raphael Mechoulam, Dr. Sanjay Gupta, Endocannabinoid System physiology, and Rick Simpson oncology protocols.</p>
+        </div>
+        <div style="margin-top: 1.5rem;">
+          <a href="./media-cannabis.html" class="nav-btn" style="display: inline-block; text-align: center; width: 100%; background: var(--terminal-green); color: #000; font-weight: bold;">Access Cannabis Video Suite (Page 1) →</a>
+        </div>
+      </article>
+
       <!-- Card 1: Data Center Video Collection -->
       <article class="video-card">
         <div>
-          <a href="./media-datacenter.html">
-            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="Data Center Infrastructure" class="video-thumb">
-          </a>
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="Data Center Infrastructure" class="video-thumb">
           <p style="font-size: 0.75rem; color: var(--accent-red); letter-spacing: 1px;">// TARGET: INFRASTRUCTURE & THERMAL FEEDS</p>
           <h2><a href="./media-datacenter.html" style="color: var(--terminal-green); text-decoration: none;">Data Center Video Archive (All 5 Intercept Feeds)</a></h2>
           <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Access all original thermal pollution footage, Shalersville BitChute broadcasts, grid strain analysis, and local news town hall coverage.</p>
@@ -125,9 +146,7 @@
       <!-- Card 2: Epstein Video Intercepts -->
       <article class="video-card" style="border-color: var(--accent-red);">
         <div>
-          <a href="./media-epstein.html">
-            <img src="ChatGPT-Image-Feb-17-2026-11_59_41-AM-745118524.png" alt="Epstein Vault Surveillance" class="video-thumb">
-          </a>
+          <img src="ChatGPT-Image-Feb-17-2026-11_59_41-AM-745118524.png" alt="Epstein Vault Surveillance" class="video-thumb">
           <p style="font-size: 0.75rem; color: var(--accent-red); letter-spacing: 1px;">// VIDEO SURVEILLANCE: UNSEALED DEPOSITIONS & TAPES</p>
           <h2><a href="./media-epstein.html" style="color: var(--terminal-green); text-decoration: none;">The Epstein Vault: Video Intercepts & Tarmac Logs</a></h2>
           <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Raw audio-visual logs, court deposition tape excerpts, and private jet tarmac surveillance tracking the inner circle's movements.</p>
@@ -140,9 +159,7 @@
       <!-- Card 3: Diquat Water Contamination Video Drop -->
       <article class="video-card" style="border-color: #58a6ff;">
         <div>
-          <a href="./media-diquat.html">
-            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80" alt="Diquat Water Contamination Intercept" class="video-thumb">
-          </a>
+          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80" alt="Diquat Water Contamination Intercept" class="video-thumb">
           <p style="font-size: 0.75rem; color: #58a6ff; letter-spacing: 1px;">// FIELD INTERCEPT: DIQUAT WATER CONTAMINATION</p>
           <h2><a href="./media-diquat.html" style="color: #58a6ff; text-decoration: none;">Chris Webby on Diquat Contamination & Resistance</a></h2>
           <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Embedded local video log featuring Chris Webby addressing state water herbicide applications, grassroots mobilization across Connecticut, and European prohibition precedents.</p>
@@ -155,9 +172,7 @@
       <!-- Card 4: Biowarfare & Gain-of-Function Video Drop -->
       <article class="video-card" style="border-color: var(--accent-red);">
         <div>
-          <a href="./media-biowarfare.html">
-            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=80" alt="Biowarfare Gain of Function Intercept" class="video-thumb">
-          </a>
+          <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=80" alt="Biowarfare Gain of Function Intercept" class="video-thumb">
           <p style="font-size: 0.75rem; color: var(--accent-red); letter-spacing: 1px;">// BIOWARFARE INTERCEPT: THE UNMASKING PART 4</p>
           <h2><a href="./media-biowarfare.html" style="color: var(--accent-red); text-decoration: none;">The Unmasking Part 4: Gain of Function</a></h2>
           <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Embedded BitChute stream breaking down gain-of-function research, mRNA lipid transport systems, targeted DNA vectors, and agency paper trails (NIH, DARPA, CIA, WHO).</p>
