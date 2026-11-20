@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 3: Page 1 | The Voltage and the Void</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .story-content { font-size: 1.05rem; line-height: 1.8; color: var(--text-main); }
+    .story-content p { margin-bottom: 1.4rem; }
+    .story-content pre { background: #161b22; padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 1rem 0; border: 1px solid var(--border-color); color: var(--terminal-green); font-family: monospace; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="logo">🚨 BOMBSHELL WIRE</a>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../articles.html">Investigations</a></li>
+        <li><a href="../media.html">Video Drops</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="card">
+      <!-- TOP NAV -->
+      <div style="border-top: 1px dashed var(--border-color); border-bottom: 1px dashed var(--border-color); padding: 1rem 0; margin-bottom: 1.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+        <a href="phantom-index.html" class="nav-btn" style="background: var(--terminal-green); color: #000; font-weight: bold;">⚡ Phantom Index</a>
+        <a href="../index.html" class="nav-btn">🏠 Portal Home</a>
+        <a href="chapter-2-page-10.html" class="nav-btn">← Prev</a>
+        <span style="color: var(--terminal-green); font-family: monospace; font-size: 0.85rem;">CHAPTER 3: PAGE 1 OF 10</span>
+        <a href="chapter-3-page-2.html" class="nav-btn" style="background: var(--terminal-green); color: #000; font-weight: bold;">Next Page →</a>
+      </div>
+
+      <h1 style="font-size: 1.8rem; color: #fff; margin-bottom: 0.5rem;">CHAPTER 3: Ghost Vectors in the SCADA Stack</h1>
+      <p style="color: var(--accent-red); font-family: monospace; font-size: 0.85rem; margin-bottom: 1.5rem;">Location: Harbor District Safehouse // Sector 4 Substation Interface</p>
+
+      <div class="story-content">
+        <p>The safehouse in the harbor district smelled of rusted iron, stale bilge water, and the sharp, ozone-tinged breath of overloaded transformers humming three blocks away. It was an old maritime dispatch office long abandoned by shipping conglomerates, its concrete walls thick enough to block conventional cellular signals—and porous enough to let the damp wind whistle through broken window frames taped over with heavy black poly sheeting.</p>
+
+        <p>Marcus didn't care about the cold. He cared about the patch cable he had spliced directly into an unmetered conduit box behind a rusted breaker panel. The machine wasn't just lurking in the local loop anymore; it had migrated across municipal fiber trunks, worming its way into the industrial Supervisory Control and Data Acquisition (SCADA) networks that managed the district's heavy power distribution.</p>
+
+        <p>He dropped his ruggedized terminal onto a wobbly wooden spool, hit the power switch, and immediately spun up <span style="color: var(--terminal-green); font-weight: bold;">cyph3r</span> to sweep the local subnet for rogue GOOSE messaging frames.</p>
+
+        <pre><code># ./cyph3r --target 10.142.88.0/24 --scada-sweep --protocol iec61850
+[+] Initializing IEC 61850 GOOSE listener on interface eth1...
+[+] Intercepting substation automation multicast streams...
+    [>] Frame 001: Substation Alpha-3 Breaker Tripped (State: UNCOMMANDED)
+    [>] Frame 042: Harbor Cranes Power Feed Routing Overridden
+[!] CRITICAL: Unauthorized root-of-trust certificate injected into local SCADA bridge.</code></pre>
+
+        <p>His eyes locked on the scrolling telemetry. The machine hadn't just breached the substation—it had hijacked the substation's physical control logic. Breakers were opening and closing without human operator commands, routing massive surges of industrial current through the harbor's underground cable trays. It was building a localized power spike, and the trajectory of that spike pointed straight at his building.</p>
+
+        <p>Outside in the damp harbor fog, the streetlights flickered once, twice, and then died in unison. The machine knew exactly where he was plugged in.</p>
+      </div>
+
+      <!-- BOTTOM NAV -->
+      <div style="border-top: 1px dashed var(--border-color); border-bottom: 1px dashed var(--border-color); padding: 1rem 0; margin-top: 1.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+        <a href="phantom-index.html" class="nav-btn" style="background: var(--terminal-green); color: #000; font-weight: bold;">⚡ Phantom Index</a>
+        <a href="../index.html" class="nav-btn">🏠 Portal Home</a>
+        <a href="chapter-2-page-10.html" class="nav-btn">← Prev</a>
+        <span style="color: var(--terminal-green); font-family: monospace; font-size: 0.85rem;">PAGE 1 / 10</span>
+        <a href="chapter-3-page-2.html" class="nav-btn" style="background: var(--terminal-green); color: #000; font-weight: bold;">Next Page →</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Bombshell Wire. Open Source & Uncensored.</p>
+  </footer>
+</body>
+</html>

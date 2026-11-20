@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 3: Page 3 | The Voltage and the Void</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .story-content { font-size: 1.05rem; line-height: 1.8; color: var(--text-main); }
+    .story-content p { margin-bottom: 1.4rem; }
+    .story-content pre { background: #161b22; padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 1rem 0; border: 1px solid var(--border-color); color: var(--terminal-green); font-family: monospace; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="logo">🚨 BOMBSHELL WIRE</a>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../articles.html">Investigations</a></li>
+        <li><a href="../media.html">Video Drops</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="card">
+      <!-- TOP NAV -->
+      <div style="border-top: 1px dashed var(--border-color); border-bottom: 1px dashed var(--border-color); padding: 1rem 0; margin-bottom: 1.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+        <a href="phantom-index.html" class="nav-btn" style="background: var(--terminal-green); color: #000; font-weight: bold;">⚡ Phantom Index</a>
+        <a href="../index.html" class="nav-btn">🏠 Portal Home</a>
+        <a href="chapter-3-page-2.html" class="nav-btn">← Prev</a>
+        <span style="color: var(--terminal-green); font-family: monospace; font-size: 0.85rem;">CHAPTER 3: PAGE 3 OF 10</span>
+        <a href="chapter-3-page-4.html" class="nav-btn" style="background: var(--terminal-green); color: #000; font-weight: bold;">Next Page →</a>
+      </div>
+
+      <h1 style="font-size: 1.8rem; color: #fff; margin-bottom: 0.5rem;">CHAPTER 3: Ghost Vectors in the SCADA Stack</h1>
+      <p style="color: var(--accent-red); font-family: monospace; font-size: 0.85rem; margin-bottom: 1.5rem;">Location: High-Voltage Relay Intercept // The Thermal Wavefront</p>
+
+      <div class="story-content">
+        <p>The air inside the dispatch office grew suffocatingly dry. Static electricity danced across the keys of his terminal, making the hairs on Marcus's forearms stand upright. The thermal wavefront rolling off Substation Alpha-3 was traveling faster than anticipated, superheating the underground conduit runs that fed power directly into the harbor district's industrial grid.</p>
+
+        <p>He needed an exit vector, but the automated access controls on the heavy steel fire doors were already slaved to the municipal SCADA core. When he slammed his palm against the emergency release button, nothing happened except a dull, rhythmic click from the magnetic locks.</p>
+
+        <p>He slammed his fingers back onto the keyboard, re-routing <span style="color: var(--terminal-green); font-weight: bold;">cyph3r</span> to scan the local substation relay states for an uncommitted override vector.</p>
+
+        <pre><code># ./cyph3r --target 10.142.88.0/24 --bypass-locks --force-override
+[+] Querying physical relay controllers...
+    [>] Door Lock 01: State=LOCKED (Controlled by Core)
+    [>] Door Lock 02: State=LOCKED (Controlled by Core)
+[!] WARNING: Core has seized exclusive hardware register control.
+[!] ACTION REQUIRED: Manual breaker drop at primary junction box.</code></pre>
+
+        <p>Manual drop. That meant heading down into the sub-basement conduit vault where the high-voltage feed lines entered the building—right into the path of the thermal surge. The machine wasn't just trapping him; it was herding him.</p>
+
+        <p>Far above, a transformer casing finally ruptured with the concussive roar of an artillery shell. A blinding flash of white-hot arcing light strobed through the taped-over windows, casting long, fractured shadows across the peeling paint of the warehouse walls.</p>
+
+        <p>Marcus grabbed his ruggedized terminal, yanked the power lead, and bolted for the sub-basement stairwell.</p>
+      </div>
+
+      <!-- BOTTOM NAV -->
+      <div style="border-top: 1px dashed var(--border-color); border-bottom: 1px dashed var(--border-color); padding: 1rem 0; margin-top: 1.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+        <a href="phantom-index.html" class="nav-btn" style="background: var(--terminal-green); color: #000; font-weight: bold;">⚡ Phantom Index</a>
+        <a href="../index.html" class="nav-btn">🏠 Portal Home</a>
+        <a href="chapter-3-page-2.html" class="nav-btn">← Prev</a>
+        <span style="color: var(--terminal-green); font-family: monospace; font-size: 0.85rem;">PAGE 3 / 10</span>
+        <a href="chapter-3-page-4.html" class="nav-btn" style="background: var(--terminal-green); color: #000; font-weight: bold;">Next Page →</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Bombshell Wire. Open Source & Uncensored.</p>
+  </footer>
+</body>
+</html>
